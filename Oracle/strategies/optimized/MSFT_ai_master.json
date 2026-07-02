@@ -1,0 +1,97 @@
+{
+  "name": "MSFT Mean-Reversion Reversal Strategy (ICT-Inspired)",
+  "symbol": "MSFT",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the higher timeframe (HTF) primary market structure and bias (e.g., range-bound, weak uptrend, weak downtrend). For mean-reverting MSFT, focus on identifying range boundaries or exhaustion points within a weak trend.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Wait for a clear liquidity sweep on the HTF (e.g., daily/4H) \u2013 price clearing a previous swing high (buy-side liquidity) for a potential short, or a previous swing low (sell-side liquidity) for a potential long. This indicates exhaustion of the current move.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After the HTF liquidity sweep, drop to a lower timeframe (LTF, e.g., 1H/15min) and confirm a 'Change of Character' (CHoCH) \u2013 a break of the immediate internal market structure in the opposite direction of the sweep. This confirms the reversal intent.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following the CHoCH and subsequent displacement, identify a Fair Value Gap (FVG) or an Order Block. Use the Fibonacci 61.8%\u201378.6% retracement zone within this FVG/Order Block for an Optimal Trade Entry (OTE).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Bullish liquidity sweep (sell-side cleared) followed by bullish CHoCH and OTE. For short entries: Bearish liquidity sweep (buy-side cleared) followed by bearish CHoCH and OTE.",
+      "confidence": 0.88,
+      "source": "combined_logic"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: Target the next significant structural swing high (buy-side liquidity pool). For liquidity sweep shorts: Target the next significant structural swing low (sell-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Set take-profit at structural highs (for longs) or structural lows (for shorts). Consider taking partial profits at the first significant target, especially given MSFT's mean-reverting nature, to lock in gains.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Move stop loss to break-even or trail after a significant move in favor of the trade or after partial profits are taken.",
+      "confidence": 0.8
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup) or above the order block for short trades (bearish setup). The stop loss should be placed at a level that invalidates the setup's market structure.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage and avoid premature stops due to market noise.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Limit risk to a fixed percentage of trading capital per trade (e.g., 1-2%). Position size accordingly based on stop loss distance.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Aim for a minimum Risk-Reward (R:R) ratio of 1:2 or higher. The OTE entry should facilitate favorable R:R.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for Optimal Trade Entry)",
+    "Price Action Analysis (for identifying Liquidity Sweeps, CHoCH, FVG, Order Blocks, Market Structure)"
+  ],
+  "market_structure": [
+    "Higher Highs/Higher Lows (Uptrend)",
+    "Lower Highs/Lower Lows (Downtrend)",
+    "Liquidity Pools (Previous Swing Highs/Lows)",
+    "Order Blocks (Institutional footprints)",
+    "Fair Value Gaps (FVG - Imbalances)",
+    "Change of Character (CHoCH - Internal market structure shift)"
+  ],
+  "psychology": [
+    "Patience to wait for high-probability setups that meet all criteria, especially the OTE.",
+    "Discipline to adhere strictly to stop loss and take profit levels.",
+    "Avoid emotional trading; trust the system and the identified market structure.",
+    "Understand that MSFT's mean-reverting nature means reversals can be sharp but potentially short-lived; focus on capturing the initial move."
+  ],
+  "adaptations": [
+    "If MSFT's volatility significantly increases, adjust stop loss buffer and position sizing accordingly.",
+    "If MSFT develops a stronger, sustained trend, consider adapting exit strategies to allow for longer holds, but always prioritize mean-reversion entries.",
+    "Continuously monitor MSFT's characteristics; if it deviates from 'mean_reverting_normal', re-evaluate the strategy's effectiveness."
+  ],
+  "overall_confidence": 0.87,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "MSFT",
+  "_timestamp": "2026-06-03 12:48:12.916294",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "MSFT",
+  "optimization_score": 86.0,
+  "_optimized_at": "2026-06-14 03:12:39.881764",
+  "entry_tf": "30min"
+}

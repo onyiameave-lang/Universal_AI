@@ -1,0 +1,759 @@
+746652745
+A Fidelity Investments Webinar Series
+Identifying Chart Patterns
+with Technical Analysis
+BROKERAGE: TECHNICAL ANALYSIS
+Getting Started with Technical Analysis
+Learn the assumptions that guide technical analysis, and get to
+know the basics of trend trading.
+Understanding Indicators in Technical Analysis
+Identify the various types of technical indicators, including trend,
+momentum, volume, volatility, and support and resistance.
+Technical
+Identifying Chart Patterns with Technical Analysis
+Analysis
+Use charts and learn chart patterns through specific examples of
+important patterns in bar and candlestick charts.
+Webinar
+Series Managing Risk with Technical Analysis
+Manage your trading risk with a range of confirmation methods.
+1
+Charles D. Kirkpatrick II, CMT
+Charles D. Kirkpatrick II, CMT, is president of Kirkpatrick & Company, Inc., a technical
+analysis research firm that publishes the Market Strategistinvestment newsletter. A
+past instructor in finance at the School of Business Administration at Fort Lewis College
+and adjunct professor of finance at Brandeis University International Business School,
+he is a two-time winner of the Chartered Market Technicians Association’s prestigious
+Charles H. Dow Award for research in technical analysis, winner of the MTA Annual
+Award in 2008 for “Outstanding Contributions to the Field of Technical Analysis,” and
+winner in 2012 of the Mike Epstein Award from the MTA Educational Foundation for
+“Long-Term sponsorship of Technical Analysis in Academia.”
+About Our
+He is a Chartered Market Technician, a past member of the board of directors of the
+Market Technicians Association, past editor of the Journal of Technical Analysis, past
+Coauthor board member and vice president of the CMT Association Educational Foundation and
+a member of the American Association of Professional Technicians (AAPTA). He
+coauthored Technical Analysis: The Complete Source for Financial Market Technicians,
+the primary textbook for the CMT program and for university graduate courses on
+technical analysis, authored Beat the Marketand, most recently, Time the Markets:
+Using Technical Analysis to Interpret Economic Data.
+He is a graduate of Phillips Exeter Academy, Harvard College (AB), and the Wharton
+School (MBA) and lives with his wife in Maine.
+2
+BROKERAGE: TECHNICAL ANALYSIS
+Techniques for
+Trading Patterns
+Understanding Construction
+Patterns and of Common
+Their Limits Chart Patterns
+Agenda
+3
+Understanding
+Patterns and
+Their Limits
+BROKERAGE: TECHNICAL ANALYSIS
+Defining Patterns
+• A pattern is bounded by at least two trend lines (straight or curved)
+• All patterns have a combination of entry and exit points
+• Patterns can be continuation patterns or reversal patterns
+• Patterns are fractal, meaning that they can be seen in any charting
+period (weekly, daily, minute, etc.)
+• A pattern is not complete or activated until an actual breakout occurs
+5
+BROKERAGE: TECHNICAL ANALYSIS
+The Limits of Patterns
+Keep in Mind
+Some of our human tendencies can be
+dangerous for investors.
+• See patterns where there aren’t any
+• Believe “market lore,” technical and fundamental, without evidence
+• Look backwards rather than forward
+• Stick with original price targets of patterns after conditions have
+changed
+6
+Techniques for
+Trading Patterns
+BROKERAGE: TECHNICAL ANALYSIS
+Techniques for Trading Patterns
+• Breakouts
+• Entry Stops
+• Protective Stops
+• Retracements
+8
+BROKERAGE: TECHNICAL ANALYSIS
+Breakouts
+Violation of Trend Line,
+Support or Resistance, or
+previous reversal point
+It signifies that a change Resistance Breakout
+in buyer and seller
+behavior and signals
+the beginning or end
+of a trend.
+Price
+9
+BROKERAGE: TECHNICAL ANALYSIS
+Confirmation Filters
+Types of Filters
+Confirmation • Intrabar
+Filters • Multiple closes
+• Time
+Apply a confirmation filter to
+determine whether a breakout
+• Percentage or point
+has taken place.
+• Money
+10
+BROKERAGE: TECHNICAL ANALYSIS
+Entry Stops
+Entry Stops
+Buy stop orders are used to
+enter trades once the price
+breaks out.
+Resistance Breakout
+Trend Line Breakout
+11
+BROKERAGE: TECHNICAL ANALYSIS
+False and Failed Breakouts
+False Breakout
+Breakout False Breakout (return
+Price breaks out but almost Resistance through breakout level)
+immediately returns back Line
+through its breakout price. Failed Breakout
+Failed Breakout
+(Trap)
+False breakout occurs and
+the price then breaks out in
+the opposite direction.
+Trend Line
+12
+BROKERAGE: TECHNICAL ANALYSIS
+Protective Stops
+Protects Capital
+Determines the amount of
+capital risk before entry
+Types of
+placement
+Breakout
+Resistance Line
+• Filters, such as percent,
+points, or money
+• Trend line, support or
+resistance level with filter
+Protective Stop
+13
+BROKERAGE: TECHNICAL ANALYSIS
+Trading False Breakouts Using Protective Stops
+Example
+• Enter on breakout False Breakout Protective sell stop and sell
+short entry stop
+• Place protective stop
+outside breakout bar
+opposite from breakout
+direction
+• Place entry stop at same
+Failure
+level (called a “stop and
+reverse” order)
+• If price continues in
+direction of breakout, profit
+from breakout entry
+• If breakout is false, profit
+from stop and reverse
+14
+BROKERAGE: TECHNICAL ANALYSIS
+Retracements
+Counter Trend
+Correction
+Retracement (pullback)
+Types
+• Pullback (on breakout down)
+• Throwback (on breakout up)
+Waiting for
+Trend Line Breakout
+• Don’t always occur
+• Performance can suffer
+when they do
+15
+Construction of
+Common Chart
+Patterns
+BROKERAGE: TECHNICAL ANALYSIS
+Common Chart Patterns
+Multi-Bar Candlestick Short-Term
+Patterns Patterns Patterns
+Horizontal Congestion
+• Doji • Pennant/Flag
+• Double and Triple • Harami • Gaps
+Tops/Bottoms • Hanging Man/Hammer • Pipe Bottom
+• Rectangles • Shooting Star/Inverted • Narrow Range
+Hammer
+Triangles
+• Engulfing
+• Symmetrical • Dark Cloud/Piercing
+• Ascending and Descending
+• Wedges
+Other
+• Head and Shoulders
+• Cup and Handle
+17
+BROKERAGE: TECHNICAL ANALYSIS
+Horizontal Congestion: Double Top
+Characteristics:
+Double Top
+(breakout down) Double Top
+• Two successive peaks separated
+by an opposite reversal point
+Resistance Line
+• Either rounded or pointed peaks
+that are usually at roughly the same
+price (resistance level) Entry Pullback
+Breakout
+• Price must break out of middle Support
+Line Breakout
+reversal point
+Price
+Calculate target price:
+Taking the height from the highest peak to the trough and
+then subtracting the amount from the breakout price to the
+downside.
+18 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Horizontal Congestion: Double Bottom
+Characteristics:
+Double Bottom
+(breakout up)
+• Two successive troughs separated
+by a peak
+Breakout
+Breakout
+• Either rounded or pointed troughs
+Resistance line
+that are usually at roughly the same
+price (support level)
+Entry
+Throwback
+• Price must break out of
+middle peak
+Double Bottom
+Support line
+Price
+Calculate target price:
+Taking the distance from the troughs to the peak and then
+adding that amount from the breakout price to the upside.
+19 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Horizontal Congestion: Triple Top
+Characteristics:
+Triple Top
+(breakout down)
+• Three distinct peaks at roughly the Triple
+Top
+same price level separated by two
+intermittent troughs Resistance line
+• Breakout occurs when price exceeds Pullback
+the extreme of the intermittent Breakout
+trough or a trend line connecting
+those points Support line
+Entry Breakout
+Price
+Calculate target price:
+Take the height from the highest peak to the lowest trough
+in the pattern. Then subtract that amount from the lowest
+trough in the pattern to generate a price target.
+20 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Horizontal Congestion: Triple Bottom
+Characteristics:
+Triple Bottom
+(breakout up)
+• Three distinct troughs at roughly the
+same price level separated by two
+intermittent peaks at any level Entry Breakout
+Breakout
+Resistance line
+• Breakout occurs when price exceeds
+the extreme of the intermittent peaks
+or a trend line connecting those
+Throwback
+points
+Triple
+Bottom
+Support line
+• Best performance may be after a Price
+sustained decline*
+• An average performance, but watch Calculate target price:
+for failures*
+Take the height from the highest peak to the lowest trough
+in the pattern. Then add that amount to the highest peak in
+the pattern to generate a price target.
+21 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Horizontal Congestion: Rectangles
+Characteristics:
+Rectangle
+• Trading range with support and (entry up, breakout up) Resistance Zone
+resistance levels bounding price
+Entry Throwback
+action
+Support Zone
+Shortfall Breakout
+• Slight tilt, similar to horizontal Breakout
+channel Resistance line
+• Often has many false breakouts*
+Support line
+Price
+• Things to consider:
+‐ Confirm a breakout
+‐ “Shortfall” often indicator of eventual Calculate target price:
+breakout direction
+Take the height from the resistance line to the support line. Then
+• Best occurrence may be bottom either add that amount to the resistance line to generate a price
+breaking upward* target for an upside breakout, OR subtract that amount from the
+support line to generate a price target for a downside breakout.
+22 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Triangle: Symmetrical
+Characteristics:
+Symmetrical Triangle
+(breakout up)
+• Bounded by a downward sloping
+upper trend line and an upward
+sloping lower trend line. Each bound Throwback
+is a straight trend line Breakout
+Target Line
+• Prices must touch each bound at
+least twice. Many false breakouts. Entry
+Moderately successful in
+performance Cradle
+Price
+• Things to consider:
+‐ Confirm a breakout
+Calculate target price:
+• Best occurrence may be upward
+Take the height from the highest peak in the pattern to the
+breaking out –above average for
+lowest trough in the pattern. Then either add it (for upward
+all patterns* breakouts) to the breakout price or subtract it (for downward
+breakouts) from the breakout price to generate a price target.
+23 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Triangle: Ascending
+Characteristics:
+Ascending Triangle
+(breakout down)
+• Bounded by a horizontal upper trend
+line and an upward sloping lower Pullback
+trend line. Each bound is a straight Resistance line
+Target
+trend line
+Line
+Entry
+• Prices can break in either direction,
+but more commonly upward*
+Support line
+Breakout
+• Breakout usually occurs in pattern. Uptrend Line
+About average failure rates but many Price
+small false breakouts*
+Calculate target price:
+• Post breakout performance average
+on upside but above average on
+Take the height from the highest peak in the pattern to the
+downside* lowest trough in the pattern. Then either add it (for upward
+breakouts) to the breakout price or subtract it (for downward
+breakouts) from the breakout price to generate a price target.
+24 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Triangle: Descending
+Characteristics:
+Descending Triangle
+(breakout down)
+• Bounded by two trend lines; the
+lower is horizontal and the upper
+slopes downward Resistance line
+Downtrend
+Line Pullback
+• Prices can break in either direction Entry
+but most commonly downward*
+Support line
+• Above-average performance on Breakout Down
+Breakout
+upside break; retracements occur
+often* Price
+Calculate target price:
+Take the height from the highest peak in the pattern to the
+lowest trough in the pattern. Then either add it (for upward
+breakouts) to the breakout price or subtract it (for downward
+breakouts) from the breakout price to generate a price target.
+25 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Triangle: Wedge
+Characteristics:
+Rising Wedge
+(breakout down from climax peak)
+• Bounded by two trend lines, each
+headed in the same direction; Price Climax
+must touch a trend line at least five Pullback
+times (3 times on one and 2 times on
+the other) before a breakout
+Breakout
+• Often occur following a panic
+(declining wedge) or bubble Entry
+(rising wedge)
+Price
+• Performance in both types is below
+average, and retracements are
+very common* Calculate target price:
+For downward breakout, the lowest trough in the pattern is the
+price target. For upward breakouts, take the height from the
+highest peak in the pattern to the lowest trough in the pattern
+and add that amount to the breakout price for a price target.
+26 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Head and Shoulders: Top
+Characteristics:
+Head
+• Three peaks with center peak higher
+than the other two
+Left Shoulder
+Right Shoulder
+Breakout
+• Shoulders should be at approximately
+the same level and the head higher
+• Line connecting the two throughs
+Neckline
+between the peaks is called
+the “neckline”
+• Pattern is only complete on breaking
+the neckline Target
+• Target is the distance from the head to
+the neckline projected from the neckline
+• This is a standard pattern for tops and
+has one of the lowest failure rates
+27 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Head and Shoulders: Bottom (Inverse)
+Characteristics:
+• Inverted but otherwise
+Head and Shoulders Bottom
+identical to a top pattern (breakout up)
+except not as profitable*
+Price
+Breakout Breakout
+Neckline
+Neckline
+Entry Throwback
+Left Shoulder
+Left Shoulder Right Shoulder Right
+Shoulder
+Head Head
+28 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Cup and Handle (also “Saucer”)
+Characteristics:
+Rounding Bottom
+(breakout up)
+• Pattern consists of a rounded bottom
+(not a “V” bottom), two “lips” at each
+Price Breakout
+end, and a “handle” (similar to a flag
+pattern) from the handle Entry Breakout Lip
+• Pattern is complete with breakout Lip
+above both lips
+Throwback
+Breakout
+Down
+• Often have a throwback Handle
+Cup or Bowl
+• The pattern’s performance ranks
+about average for bottom patterns*
+Calculate target price:
+Take the height of the right cup lip to the bottom of the
+cup, then add that amount to the breakout price.
+29 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Trading with Patterns
+= Buy Wedge
+= Stop
+Wedge
+= Exit
+Triangle
+Triangle
+Rectangle
+*Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+30
+BROKERAGE: TECHNICAL ANALYSIS
+Best Multi-Bar Patterns
+Upward Signals Downward Signals
+• Descending • Flag
+Triangle
+• Head and
+• Rectangle Shoulders top
+• Pipe Bottom • Island Reversal
+31
+BROKERAGE: TECHNICAL ANALYSIS
+General Information about a Candlestick
+Characteristics:
+• Traditionally, candlestick patterns are reversal patterns, meaning they
+are used to identify when a trend is ending
+• Candlestick patterns are often used with longer-term trends, thus,
+upward reversal patterns after a correction in a longer upward trend
+show the best performance, and vice versa for downward reversal
+patterns in a long downward trend
+• Be careful not to act on a perceived candle pattern until the pattern
+has formed and is activated by a breakout in a certain direction
+32
+BROKERAGE: TECHNICAL ANALYSIS
+Doji
+Characteristics:
+Doji
+• A one-candle pattern formed when the open
+and close are the same price, and the high
+and low are roughly equidistant from the open
+and close
+• Extremely common
+• Indicates indecision in the marketplace and
+thus is a possible warning of price change
+33 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Harami
+Characteristics:
+Harami
+• A two-candle pattern of a large body of either
+Top Bottom
+color followed by a small body of the opposite
+color; The second body is completely within
+the body of the large body and is called a
+“spinning top”
+• Although common belief is that the haramiis
+a reversal pattern, many report that is has the
+potential of breaking either way
+• A variation that has a dojiinstead of a spinning
+top as the second candle has equally average
+performance and random breakout*
+Candle body can
+be Black or White
+*Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+34
+BROKERAGE: TECHNICAL ANALYSIS
+Hanging Man and Hammer
+Characteristics:
+Hanging Man —Hammer
+• One-candle patterns differentiated by the color Top Bottom
+of the body. Each pattern has a high that
+coincides with either the opening or closing
+price
+• Hanging man, thought to be a continuation
+pattern, actually breaks in either direction
+randomly with a slight upward bias. Its overall
+performance is below average*
+• Hammers occur relatively frequently but have
+below-average performance*
+35 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Shooting Star and Inverted Hammer
+Characteristics: Shooting Star and
+Inverted Hammer
+• A one-candle inverted hanging man or hammer Top Bottom
+pattern. Hammers by themselves have white
+bodies and shooting stars have black bodies
+• As a one-candle pattern, the shooting star has
+average performance. The same is true for the Either Can Be
+Black or White
+single inverted hammer*
+36 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Engulfing
+Characteristics:
+Engulfing
+• A two-bar pattern in which the second bar Top Bottom
+body completely engulfs the first bar body*
+• A bottom engulfing pattern, with a short black
+body followed by a tall white body, is thought
+to be an upward reversal pattern and actually
+has very good performance on a downward
+breakout in a downward trend*
+37 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Dark Cloud Cover and Piercing Line
+Characteristics: Dark Cloud Cover
+and Piercing Line
+• The dark cloud cover is a two-bar pattern where Top Bottom
+the second bar closes higher than the first and
+is black versus white in the first bar
+• The piercing line is the opposite of the dark
+cloud cover in that the second bar is white and
+lower than the first bar which is black
+• The dark cloud is thought to be a downward
+reversing pattern
+• The piercing line pattern is thought to be an
+upward reversing pattern*
+38 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Pennant/Flag
+Characteristics:
+Flag and Pennant
+• Pennant and flag patterns are
+in upward trend Flag Pennant
+variations of the same pattern
+• These patterns are often preceded by
+a steep, sharp price change, up or
+down, and form a short consolidation Price
+that appears like a triangle or flag.
+Generally, the pattern slopes slightly
+in the direction opposite from the
+trend
+• The breakout in either direction is
+Calculate target price:
+often followed by a move that equals
+the earlier steep, sharp price change Take the height from the start of the "flag pole” to the
+into the pattern highest peak in the pennant. Add that amount to the
+bottom of the pennant for an upward price target.
+39 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Gaps
+Characteristics
+• Definition –no trading (gap)
+at specific prices
+• Gaps can be considered
+“up” or “down”
+• Gaps are caused by
+appreciable changes
+in supply and demand
+from one close to the
+following open
+Gap Up
+40 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Gaps
+Characteristics
+• Gaps are generally profitable on
+breakouts from patterns, trends,
+support or resistance
+• A method of trading a gap is the
+“explosion gap pivot.” It assures
+Breakout
+that the gap is valid
+• After the gap, wait for
+“throwback.” If throwback “covers”
+the gap, no action. If the
+throwback stops, this is called the
+“pivot low.” Place buy entry above
+high of the gap bar
+Gap PPivivoot tL Looww
+• “Pivot” is the lowest level of the
+post-gap breakout
+• Protective stops initially placed at
+gap low and then below pivot low
+41 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Two-Bar Reversal Button or Pipe Bottom
+Characteristics: Two-Day Reversal Bottom
+(or Pipe Bottom)
+• Two bars and occurs at the end of a large
+trend, up or down trend. Ideally, the first bar,
+in a bottom pattern, closes at the low, and the
+second bar closes in the upper half of the range.
+It is more reliable in weekly data
+• Bar ranges are larger than preceding
+bar ranges
+• Action occurs on breakout through second bar
+Calculate target price:
+Take the height from the taller of the two bars to the lower
+of the two bars. Add that amount to the taller of the two
+bars to get a price target.
+42 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Volatility Patterns
+Characteristics:
+Inside Bar
+• Dull activity is known as “low volatility.” New
+trends often begin from periods of low volatility Buy next bar
+at opening
+above inside
+• One way to look at volatility is to observe the
+bar close
+relationship between price bars
+• “Range” is the spread between high and low in
+a price bar
+• If a bar is followed by a bar with less range,
+volatility is declining; the second bar is called a Sell next bar
+“narrow range” bar at opening
+below inside
+bar close
+• When this second bar’s range is contained
+within the range of its preceding bar, it is called
+an “inside bar.”
+43 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+BROKERAGE: TECHNICAL ANALYSIS
+Narrow Range
+Characteristics:
+NR4
+• One low volatility pattern is called a “Narrow
+Range” pattern and consists of a bar with a
+Range on day 4 less
+range narrower than its preceding bars than days 1-3
+• The graph shows a four-bar, Narrow Range
+pattern (NR4) with four bars, the fourth bar
+having a narrower range than the preceding Buy
+three bars
+• The breakout occurs on a break above or below
+the high or low of the narrow range
+Sell
+44 *Source: Technical Analysis: the Complete Resource for Financial Market Technicians, 2nded.
+Getting Started with Technical Analysis
+Learn the assumptions that guide technical analysis, and get to
+know the basics of trend trading.
+Understanding Indicators in Technical Analysis
+Identify the various types of technical indicators including, trend,
+momentum, volume, and support and resistance.
+Technical
+Identifying Chart Patterns with Technical Analysis
+Analysis
+Use charts and learn chart patterns through specific examples of
+important patterns in bar and candlestick charts.
+Webinar
+Series Managing Risk with Technical Analysis
+Manage your trading risk with a range of confirmation methods.
+45
+831902058
+Visit the Fidelity
+Learning Center
+Learn more about
+putting technical
+analysis to work
+for you
+Read: Access the Technical Indicator Guide
+Watch: Check out videos that define core
+technical concepts
+Attend: Register for monthly webinars
+46
+667913740
+Thank Please join us for our upcoming webinars
+Fidelity.com/webinars
+You
+Download Active Trader Pro for free at
+Fidelity.com/ATP
+Questions? Call a trading specialist at
+877-907-4429
+47
+BROKERAGE: TECHNICAL ANALYSIS
+Important Information
+Any screenshots, charts, or company trading symbols mentioned are provided for illustrativepurposes only and should not be considered
+an offer to sell, a solicitation of an offer to buy, ora recommendation for the security.
+Investing involves risk, including risk of loss.
+Past performance is no guarantee of future results
+Stop loss orders do not guarantee the execution price you will receive and have additional risks that may be compounded in periods of
+market volatility. Stop loss orders could be triggered by price swings and could result in an execution well below your trigger price.
+Trailing stop orders may have increased risks due to their reliance on trigger pricing, which may be compounded in periods of market
+volatility, as well as market data and other internal and external system factors. Trailing stop orders are held on a separate, internal order
+file, place on a "not held" basis and only monitored between 9:30 AM and 4:00 PM Eastern.
+Technical analysis focuses on market action –specifically, volume and price. Technical analysisis only one approach to analyzing stocks.
+When considering which stocks to buy or sell, youshould use the approach that you're most comfortable with. As with all your investments,
+youmust make your own determination as to whether an investment in any particular security orsecurities is right for you basedon your
+investment objectives, risk tolerance, and financialsituation. Past performance is no guarantee of future results.
+Fidelity Brokerage Services LLC, Member NYSE, SIPC, 900 Salem Street, Smithfield, RI 02917
+© 2020 FMR LLC. All rights reserved.
+919638.1.0
+48

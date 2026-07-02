@@ -1,0 +1,98 @@
+{
+  "name": "Master Strategy for AAPL: Mean Reversion with ICT Concepts",
+  "symbol": "AAPL",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend using higher timeframe (HTF) market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend). This provides directional bias.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Wait for a bullish liquidity sweep (sell-side liquidity cleared) on the HTF, indicating a potential reversal or deep pullback.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short entries: Wait for a bearish liquidity sweep (buy-side liquidity cleared) on the HTF, indicating a potential reversal or deep pullback.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After the HTF liquidity sweep, confirm the reversal intent with a Change of Character (CHoCH) on a lower timeframe (LTF). This signifies a shift in immediate market structure.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following displacement and the formation of a Fair Value Gap (FVG) after CHoCH, use Fibonacci retracement (61.8%\u201378.6%) for an Optimal Trade Entry (OTE) within the FVG or order block.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades: Target the next significant swing high or identified buy-side liquidity pool as the primary take-profit level.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Target the next significant swing low or identified sell-side liquidity pool as the primary take-profit level.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider partial profits at intermediate structural highs/lows to lock in gains, especially given AAPL's mean-reverting nature and weak trend.",
+      "confidence": 0.8
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades: Place stop loss below the low of the order block or the low of the liquidity sweep candle, ensuring it's below the protected structural low.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Place stop loss above the high of the order block or the high of the liquidity sweep candle, ensuring it's above the protected structural high.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always leave a small spread buffer (e.g., 5-10 cents for AAPL) when setting stop loss to mitigate slippage and avoid premature stops.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Implement a fixed percentage risk per trade (e.g., 1-2% of total capital) to ensure consistent position sizing and capital preservation.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Aim for a minimum 1:2 Risk-Reward ratio for every trade. The OTE entry should facilitate achieving this ratio.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement (for Optimal Trade Entry)",
+    "Volume (to confirm displacement strength, though not explicitly mentioned in rules, it's a logical addition for ICT concepts)"
+  ],
+  "market_structure": [
+    "Higher Highs / Higher Lows (Uptrend)",
+    "Lower Highs / Lower Lows (Downtrend)",
+    "Liquidity Sweeps (Sell-side and Buy-side)",
+    "Change of Character (CHoCH)",
+    "Order Blocks",
+    "Fair Value Gaps (FVG)",
+    "Swing Highs / Swing Lows"
+  ],
+  "psychology": [
+    "Patience is key to wait for HTF liquidity sweeps and LTF CHoCH confirmation.",
+    "Discipline to adhere to OTE entries and pre-defined stop loss/take-profit levels.",
+    "Avoid overtrading; focus on high-probability setups that align with the mean-reverting nature of AAPL."
+  ],
+  "adaptations": [
+    "**Mean-Reverting Focus:** Given AAPL's mean-reverting nature, prioritize trading reversals or deep pullbacks identified by liquidity sweeps at key structural levels. The ICT framework is highly effective for this.",
+    "**Weak Trend Consideration:** Do not expect long, sustained trending moves. Focus on capturing moves from one liquidity pool to the next, as the weak trend suggests price will likely revert rather than continue indefinitely.",
+    "**Medium Volatility:** Medium volatility allows for clear structural definition and reliable Fibonacci retracement levels. Ensure stop losses account for typical daily ranges but avoid excessively wide stops.",
+    "**Multi-Timeframe Analysis:** Strictly adhere to HTF for bias and liquidity identification, and LTF for precise entry confirmation (CHoCH) and OTE. This is crucial for filtering setups in a mean-reverting environment.",
+    "**Range Trading:** If AAPL enters a clear range, treat the range boundaries as significant liquidity pools and apply the liquidity sweep/CHoCH strategy at these extremes."
+  ],
+  "overall_confidence": 0.87,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "AAPL",
+  "_timestamp": "2026-06-03 12:47:11.365564"
+}

@@ -1,0 +1,43 @@
+{
+  "_source": "book_technical_analysis_kanu_jain",
+  "_topic": "full",
+  "_source_type": "book",
+  "name": "Technical Analysis - Dr Kanu Jain Strategy",
+  "author": "Dr Kanu Jain",
+  "entry_conditions": [],
+  "exit_conditions": [],
+  "risk_management": [],
+  "indicators": [],
+  "psychology": [
+    {
+      "rule": "Greater Fool Theory: The belief that one can always buy investments at any given price, setting aside valuations, and eventually turn them into a profit because there will always be a 'Greater Fool' willing to pay a higher price.",
+      "confidence": 1.0
+    }
+  ],
+  "market_structure": [
+    {
+      "rule": "The long term major patterns in markets may consist of five successive steps or five waves.",
+      "confidence": 1.0
+    },
+    {
+      "rule": "Markets can be categorized into Bull market and Bear market.",
+      "confidence": 1.0
+    },
+    {
+      "rule": "In a Bull market, Elliot Wave theory suggests a pattern of five impulse waves (1, 2, 3, 4, 5) followed by three corrective waves (A, B, C).",
+      "confidence": 0.9
+    },
+    {
+      "rule": "In a Bear market, Elliot Wave theory suggests a pattern of five impulse waves (1, 2, 3, 4, 5) in the downward direction, followed by three corrective waves (A, B, C) in the upward direction, completing a 'Cycle'.",
+      "confidence": 0.9
+    }
+  ],
+  "chart_patterns": [],
+  "key_concepts": [],
+  "confidence": 0.5,
+  "optimized_for": "USDCHF",
+  "optimization_score": 15.0,
+  "symbol_type": "mean_reverting_choppy",
+  "_optimized_at": "2026-06-26 23:12:42.038196",
+  "entry_tf": "daily"
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Master Strategy for USDCNH",
+  "symbol": "USDCNH",
+  "symbol_type": "ranging_smooth",
+  "entry_conditions": [
+    {
+      "rule": "For long entries: Identify a bullish liquidity sweep (sell-side liquidity cleared) at a higher timeframe range support or significant structural low, followed by a Change of Character (CHoCH) confirmation on a lower timeframe (e.g., 5-15 min).",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries: Identify a bearish liquidity sweep (buy-side liquidity cleared) at a higher timeframe range resistance or significant structural high, followed by a Change of Character (CHoCH) confirmation on a lower timeframe (e.g., 5-15 min).",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target the opposing range boundary or significant market structure level (e.g., previous high/low of the range) for primary take profit.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate structural levels or prior swing highs/lows within the range, especially if the full range traversal is uncertain.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Exit if price closes significantly beyond the stop loss level, indicating a failed reversal or range break.",
+      "confidence": 0.9
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss just beyond the liquidity sweep extreme (e.g., below the sweep low for longs, above the sweep high for shorts) to protect against immediate reversal failure.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Risk a fixed percentage of capital per trade (e.g., 1-2%) based on the stop loss distance and position sizing.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "Ensure a minimum Risk-Reward ratio of 1:1.5 or higher, calculated based on the stop loss and the primary structural take profit target.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Avoid trading during high-impact news events specific to USD or CNH, as these can cause unpredictable volatility and range breaks.",
+      "confidence": 0.8
+    }
+  ],
+  "indicators": [
+    "No specific technical indicators are required; strategy relies on pure price action, market structure, and liquidity concepts."
+  ],
+  "market_structure": [
+    "Identify the prevailing higher timeframe (e.g., 4H, Daily) range boundaries (support and resistance levels) to define the trading context.",
+    "Use market structure (higher highs/higher lows for uptrend, lower highs/lower lows for downtrend) on lower timeframes to confirm CHoCH after liquidity sweeps."
+  ],
+  "psychology": [
+    "Maintain strict discipline in trade execution and adherence to risk management rules.",
+    "Avoid emotional trading decisions; stick to the predefined entry, exit, and risk parameters."
+  ],
+  "adaptations": [
+    "Prioritize trades that occur at the established higher timeframe range boundaries, as these offer the highest probability for reversals in a ranging market.",
+    "Adjust position size dynamically based on current volatility and the calculated stop loss distance to maintain consistent risk per trade.",
+    "Re-evaluate the defined range if price consistently breaks and closes beyond current boundaries, indicating a potential shift in market regime."
+  ],
+  "overall_confidence": 0.92,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDCNH",
+  "_timestamp": "2026-06-26 23:12:54.215963",
+  "optimized_for": "USDCNH",
+  "optimization_score": 0.0,
+  "_optimized_at": "2026-06-26 23:12:54.229076",
+  "entry_tf": "15min"
+}

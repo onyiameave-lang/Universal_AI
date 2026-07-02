@@ -1,0 +1,91 @@
+{
+  "name": "Master Strategy for GCF",
+  "symbol": "GCF",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "On the Higher Timeframe (HTF), identify the prevailing market structure and current range. For mean-reverting markets, this often means identifying the boundaries of consolidation or a short-term internal trend within a larger range.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Wait for a clear liquidity sweep (either bullish clearing sell-side liquidity or bearish clearing buy-side liquidity) at a significant HTF structural high or low, or at the extreme of the identified range. A single-candle liquidity sweep is preferred.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After the HTF liquidity sweep, drop to a Lower Timeframe (LTF) and wait for a Change of Character (CHoCH) confirmation in the opposite direction of the sweep. This signifies a shift in short-term market sentiment.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following the CHoCH and a clear displacement (strong move), look for a Fair Value Gap (FVG) and use Fibonacci retracement (61.8%\u201378.6% zone) for an Optimal Trade Entry (OTE) within the order block or FVG.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Bullish liquidity sweep (sell-side cleared) on HTF, followed by bullish CHoCH on LTF, then OTE in a bullish FVG/order block. For short entries: Bearish liquidity sweep (buy-side cleared) on HTF, followed by bearish CHoCH on LTF, then OTE in a bearish FVG/order block.",
+      "confidence": 0.88,
+      "source": "combined_logic"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades, set the primary take-profit at the next significant structural high (buy-side liquidity pool). For short trades, set the primary take-profit at the next significant structural low (sell-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Given GCF's low volatility and choppy nature, consider taking partial profits at intermediate structural highs/lows or previous swing points to lock in gains, especially if the full target seems distant or price action becomes indecisive.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Monitor price action closely for signs of reversal (e.g., another liquidity sweep or CHoCH against your position) as you approach targets, and be prepared to exit early if momentum fades.",
+      "confidence": 0.75
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades, place the stop loss strategically below the order block or the low of the liquidity sweep candle. For short trades, place the stop loss above the order block or the high of the liquidity sweep candle.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always add a small spread buffer to your stop loss to account for potential slippage, especially critical in low volatility markets where spreads can be a larger percentage of the move.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Maintain a minimum Risk-Reward (R:R) ratio of at least 1:1.5, ideally 1:2 or higher, to ensure profitability over time, acknowledging that in choppy markets, 1:1.5 might be more realistic for consistent hits.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Define maximum risk per trade (e.g., 0.5% - 1% of trading capital) and adhere strictly to it. Position size should be calculated based on stop loss distance and risk percentage.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement (for Optimal Trade Entry 61.8%-78.6% zone)"
+  ],
+  "market_structure": [
+    "Higher Highs/Higher Lows (Uptrend)",
+    "Lower Highs/Lower Lows (Downtrend)",
+    "Liquidity Pools (Buy-side and Sell-side)",
+    "Order Blocks",
+    "Fair Value Gaps (FVG)",
+    "Change of Character (CHoCH)"
+  ],
+  "psychology": [
+    "Patience is paramount for waiting for high-probability setups at HTF structural extremes, especially in choppy markets where false signals are common.",
+    "Avoid overtrading; focus on quality setups that align with the HTF narrative and LTF confirmation.",
+    "Manage expectations regarding target size due to low volatility; prioritize consistent smaller gains over infrequent large ones."
+  ],
+  "adaptations": [
+    "For 'mean_reverting_choppy' nature: Focus on identifying clear ranges or consolidation zones on the HTF. Liquidity sweeps at the extremes of these ranges followed by CHoCH are the highest probability setups.",
+    "For 'low_volatility': Ensure stop losses are tight but buffered for spread. Profit targets should be realistic, often targeting the opposite side of the current range or the next immediate structural high/low. Partial profit taking is highly recommended.",
+    "Utilize HTF (e.g., 1H, 4H) for market structure and liquidity sweeps, and LTF (e.g., 5M, 15M) for precise entry confirmation (CHoCH and OTE). The ratio should be appropriate for the symbol's volatility.",
+    "Be mindful that 'primary trend' might refer to the internal trend within a larger HTF range rather than a sustained directional move."
+  ],
+  "overall_confidence": 0.88,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "GCF",
+  "_timestamp": "2026-06-03 12:50:45.153720"
+}

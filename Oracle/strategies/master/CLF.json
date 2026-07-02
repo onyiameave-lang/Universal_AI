@@ -1,0 +1,91 @@
+{
+  "name": "Master Strategy for CLF",
+  "symbol": "CLF",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "On a Higher Timeframe (HTF), identify significant swing highs/lows or established range boundaries where substantial liquidity is likely to be resting. For CLF's mean-reverting nature, these often represent potential reversal points at market extremes.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Wait for a clear 'liquidity sweep' on the HTF. This occurs when price aggressively moves beyond a previous swing high (for a potential short setup) or swing low (for a potential long setup), clearing buy-side or sell-side liquidity. This often manifests as a quick wick or a single candle closing back within the previous range.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After the HTF liquidity sweep, switch to a Lower Timeframe (LTF) and wait for a 'Change of Character' (CHoCH). This is a confirmed break of the immediate short-term market structure in the opposite direction of the sweep (e.g., for a long setup, a break of a lower high/lower low structure to a higher high/higher low).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following the CHoCH and a 'displacement' (strong, impulsive move away from the liquidity sweep), identify a Fair Value Gap (FVG) or a clear Order Block (OB) in the direction of the new short-term trend.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Enter the trade on a retracement into the Optimal Trade Entry (OTE) zone, typically the 61.8% - 78.6% Fibonacci retracement of the displacement leg. The ideal entry point should coincide with the identified FVG or OB. For CLF's high volatility, precise entries are crucial to manage risk effectively.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades, target the next significant structural high or buy-side liquidity pool. For short trades, target the next significant structural low or sell-side liquidity pool. These are often previous swing points or consolidation zones within the mean-reverting range.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Given CLF's high volatility and mean-reverting nature, consider taking partial profits (e.g., 50% of position) at the first significant target (e.g., 1:1 or 1:1.5 Risk-to-Reward). This secures profits quickly and reduces exposure to potential reversals.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "After taking partial profits, move the stop loss for the remaining position to breakeven or a protected profit level. Allow the remaining position to run towards a deeper HTF structural level or the 'mean' of the price action (e.g., a longer-term moving average), using a trailing stop loss if appropriate.",
+      "confidence": 0.9
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss for long trades below the low of the Order Block or the low of the liquidity sweep candle, ensuring it's below a clear structural invalidation point. For short trades, place stop loss above the high of the Order Block or the high of the liquidity sweep candle.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always add a small buffer (e.g., 5-10 ticks or a percentage of ATR) to the stop loss to account for spread, slippage, and high volatility wicks, which are common with CLF.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Determine position size based on a fixed percentage of trading capital (e.g., 0.5% - 1% per trade) and the calculated stop loss distance. This is critical for managing risk with CLF's high volatility, ensuring no single trade can cause significant damage.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "Aim for a minimum Risk-to-Reward (R:R) ratio of 1:2 for initial targets. For mean-reverting assets, quick reversals are common, so a favorable R:R is essential to ensure profitability over a series of trades.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for Optimal Trade Entry)"
+  ],
+  "market_structure": [
+    "Higher Highs/Higher Lows (HH/HL)",
+    "Lower Highs/Lower Lows (LH/LL)",
+    "Change of Character (CHoCH)",
+    "Liquidity Sweeps (Buy-side/Sell-side)",
+    "Fair Value Gaps (FVG)",
+    "Order Blocks (OB)",
+    "Displacement"
+  ],
+  "psychology": [
+    "Adhere strictly to the defined entry and exit criteria to avoid emotional trading, especially in CLF's high-volatility environment where fear and greed can be amplified.",
+    "Accept that not every setup will work; focus on consistent execution of the strategy and proper risk management over individual trade outcomes.",
+    "Be patient for high-probability setups that align with HTF liquidity sweeps and LTF CHoCH, avoiding impulsive entries based on FOMO or revenge trading."
+  ],
+  "adaptations": [
+    "**Mean Reverting Focus:** The strategy is specifically adapted to identify liquidity sweeps at extreme highs/lows of the current range, anticipating a reversal back towards the mean. The CHoCH on the LTF confirms this reversal, providing a high-probability entry for counter-trend moves within the range.",
+    "**High Volatility Handling:** Multi-timeframe analysis (HTF for sweep, LTF for entry) is crucial for precision, mitigating the impact of large price swings. Wider stop loss buffers and smaller position sizing are implemented to absorb CLF's significant volatility. Partial profit taking is prioritized to lock in gains quickly before potential reversals.",
+    "**Weak Trend Strategy:** Given CLF's weak trend characteristic, the strategy does not rely on sustained long-term trends. Instead, it focuses on short-term market structure shifts (CHoCH) and reversals around key liquidity zones. This allows the AI to capture profitable moves within a broader mean-reverting range rather than attempting to ride extended trends that may not materialize."
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "CLF",
+  "_timestamp": "2026-06-03 12:50:27.389728"
+}

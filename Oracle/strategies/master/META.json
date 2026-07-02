@@ -1,0 +1,87 @@
+{
+  "name": "Master Strategy for META",
+  "symbol": "META",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary market structure (higher highs/higher lows for uptrend; lower highs/lower lows for downtrend) to frame the trading direction within the mean-reverting context.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Identify a bullish liquidity sweep (sell-side liquidity cleared) on a Higher Timeframe (HTF), followed by a confirmed Change of Character (CHoCH) on a Lower Timeframe (LTF).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short entries: Identify a bearish liquidity sweep (buy-side liquidity cleared) on a Higher Timeframe (HTF), followed by a confirmed Change of Character (CHoCH) on a Lower Timeframe (LTF).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After displacement and the formation of a Fair Value Gap (FVG) following a liquidity sweep and CHoCH, seek Optimal Trade Entry (OTE) within the Fibonacci 61.8%\u201378.6% retracement zone.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades: Target the next significant swing high or identified buy-side liquidity pool as the primary take-profit level.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Target the next significant swing low or identified sell-side liquidity pool as the primary take-profit level.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider taking partial profits at initial structural targets, especially given META's mean-reverting nature and weak trend, to lock in gains.",
+      "confidence": 0.9
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades: Place stop loss strategically below the identified bullish order block, ensuring it is protected from immediate retests.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Place stop loss strategically above the identified bearish order block, ensuring it is protected from immediate retests.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always incorporate a spread buffer when setting stop loss orders to account for high volatility and potential slippage, preventing premature stops.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Adjust position sizing based on META's high volatility (e.g., using Average True Range - ATR) to maintain a consistent dollar risk per trade, allowing for wider stop losses when necessary.",
+      "confidence": 0.95
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for OTE)",
+    "Price Action (for Market Structure, Liquidity Sweeps, CHoCH, FVG, Order Blocks)"
+  ],
+  "market_structure": [
+    "Higher Highs/Higher Lows (Uptrend)",
+    "Lower Highs/Lower Lows (Downtrend)",
+    "Liquidity Sweeps (Sell-side and Buy-side)",
+    "Change of Character (CHoCH)",
+    "Fair Value Gaps (FVG)",
+    "Order Blocks (OB)"
+  ],
+  "psychology": [
+    "Maintain discipline in waiting for full confirmation of liquidity sweeps and CHoCH before entry.",
+    "Avoid chasing trades; wait for OTE entries.",
+    "Manage emotions during high volatility periods by strictly adhering to risk management rules."
+  ],
+  "adaptations": [
+    "Prioritize HTF liquidity sweeps as the primary signal for potential mean-reversion, confirming with LTF CHoCH for precision entry.",
+    "Given META's high volatility, be prepared for larger price swings around entry and exit points; ensure stop losses are placed logically and with sufficient buffer.",
+    "Focus on counter-trend entries after significant liquidity sweeps, as the 'weak trend' characteristic suggests that sustained directional moves are less probable than mean-reverting pullbacks/reversals.",
+    "Utilize multi-timeframe analysis (e.g., Daily/4H for HTF structure and liquidity, 1H/15M for LTF CHoCH and OTE) to enhance trade conviction."
+  ],
+  "overall_confidence": 0.92,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "META",
+  "_timestamp": "2026-06-03 12:51:45.912377"
+}

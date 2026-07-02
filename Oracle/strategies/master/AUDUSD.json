@@ -1,0 +1,93 @@
+{
+  "name": "Master Strategy for AUDUSD",
+  "symbol": "AUDUSD",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify market structure on higher timeframes (HTF) to understand the prevailing bias, but for AUDUSD's mean-reverting nature, prioritize reversal setups at significant swing highs or lows.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Wait for a clear liquidity sweep (sell-side liquidity cleared for long, buy-side liquidity cleared for short) at a significant HTF extreme, indicating a potential reversal.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Confirm the reversal with a Change of Character (CHoCH) on a lower timeframe (LTF) following the liquidity sweep.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "After displacement and the formation of a Fair Value Gap (FVG), look for Optimal Trade Entry (OTE) within the Fibonacci 61.8% - 78.6% retracement zone of the impulse leg.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Given AUDUSD's low volatility, ensure sufficient displacement after the CHoCH to confirm conviction before seeking OTE, avoiding weak reversals.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs, target the next significant structural high (buy-side liquidity pool). For liquidity sweep shorts, target the next significant structural low (sell-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Set take-profit at structural highs (for longs) or structural lows (for shorts), aligning with the mean-reverting characteristic of AUDUSD.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider partial take-profits at intermediate structural levels or a fixed risk-to-reward ratio (e.g., 1:1.5) to lock in gains in a low volatility environment where large moves are less frequent.",
+      "confidence": 0.9
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss strategically below the order block for long trades (bullish setup) or above the order block for short trades (bearish setup), ensuring it's protected by market structure.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always include a spread buffer when setting stop loss to account for market friction and mitigate slippage, especially important in low volatility conditions.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Limit risk to a fixed percentage of trading capital per trade (e.g., 1-2%) to ensure capital preservation and consistent risk exposure.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Adjust position size based on stop loss distance to maintain consistent monetary risk per trade.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [
+    "Price Action (Market Structure, Liquidity, Order Blocks, Fair Value Gaps, Displacement)",
+    "Fibonacci Retracement Tool"
+  ],
+  "market_structure": [
+    "Higher Highs / Higher Lows (Uptrend)",
+    "Lower Highs / Lower Lows (Downtrend)",
+    "Liquidity Sweeps (Sell-side, Buy-side)",
+    "Change of Character (CHoCH)",
+    "Order Blocks",
+    "Fair Value Gaps (FVG)",
+    "Displacement"
+  ],
+  "psychology": [
+    "Maintain discipline and patience, especially in choppy, low volatility markets, waiting for high-conviction setups.",
+    "Avoid overtrading and chasing trades; focus on quality over quantity."
+  ],
+  "adaptations": [
+    "Focus on identifying reversals at significant swing highs/lows or range boundaries, as AUDUSD is mean-reverting and choppy.",
+    "Utilize multi-timeframe analysis (HTF for context, LTF for entry) to filter high-probability setups and avoid noise in a choppy market.",
+    "Given low volatility, aim for realistic profit targets at immediate structural levels and consider partial profits to secure gains.",
+    "Ensure stop losses are tight but logical, respecting market structure, and account for spread due to low volatility potentially magnifying small price movements relative to spread.",
+    "Prioritize setups with clear displacement and FVG to confirm conviction, as weak trends might lead to false signals."
+  ],
+  "overall_confidence": 0.91,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "AUDUSD",
+  "_timestamp": "2026-06-23 13:27:25.351752"
+}

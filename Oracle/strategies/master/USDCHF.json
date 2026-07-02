@@ -1,0 +1,85 @@
+{
+  "name": "Master Strategy for USDCHF",
+  "symbol": "USDCHF",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend) on a higher timeframe (e.g., 1H/4H) to establish a directional bias.",
+      "confidence": 0.95,
+      "source": "combined_rules"
+    },
+    {
+      "rule": "For long entries: Execute only after a bullish liquidity sweep (sell-side liquidity cleared) followed by a 'Change of Character' (CHoCH) confirmation on a lower timeframe (e.g., 15m/5m).",
+      "confidence": 0.9,
+      "source": "combined_rules"
+    },
+    {
+      "rule": "For short entries: Execute only after a bearish liquidity sweep (buy-side liquidity cleared) followed by a 'Change of Character' (CHoCH) confirmation on a lower timeframe (e.g., 15m/5m).",
+      "confidence": 0.9,
+      "source": "combined_rules"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Set profit target at the nearest significant opposing market structure (e.g., previous swing high/low, order block) or aim for a fixed risk-to-reward ratio (e.g., 1:1.5 to 1:2) given the low volatility.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Exit trade if a counter 'Change of Character' (CHoCH) occurs against the trade direction on the entry timeframe, indicating a potential reversal.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Consider a time-based exit if the trade remains stagnant and does not move significantly in the intended direction within a predefined period, especially in low volatility conditions.",
+      "confidence": 0.75
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop-loss immediately below the low of the bullish liquidity sweep for long trades, or immediately above the high of the bearish liquidity sweep for short trades, providing tight protection.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Limit risk per trade to a maximum of 1-2% of total trading capital to preserve capital.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "Implement a maximum daily loss limit (e.g., 3-5% of capital) to prevent overtrading and significant drawdowns.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [],
+  "market_structure": [
+    {
+      "rule": "Primary trend identification using higher highs/higher lows for uptrends and lower highs/lower lows for downtrends on higher timeframes.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "Confirmation of 'Change of Character' (CHoCH) on lower timeframes as a key reversal signal after liquidity sweeps.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Identification of liquidity pools (buy-side and sell-side) as targets for price action and potential reversal zones.",
+      "confidence": 0.9
+    }
+  ],
+  "psychology": [],
+  "adaptations": [
+    {
+      "rule": "Given USDCHF's mean-reverting and low volatility nature, prioritize precise entries on lower timeframes (e.g., 15m/5m) after higher timeframe (e.g., 1H/4H) liquidity sweeps to maximize accuracy.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Focus on capturing shorter-term moves and consider smaller, more frequent profit targets due to the weak trend and low volatility profile of the symbol.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Avoid holding trades for extended periods without significant movement; active management and potential time-based exits are crucial for stagnant trades.",
+      "confidence": 0.8
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDCHF",
+  "_timestamp": "2026-06-26 23:12:41.941745"
+}

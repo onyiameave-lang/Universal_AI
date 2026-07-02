@@ -1,0 +1,130 @@
+{
+  "name": "Master Strategy for LTC_USD: ICT Mean Reversion & Volatility Adaptation",
+  "symbol": "LTC_USD",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend) on a higher timeframe (e.g., 4H/Daily) to establish bias.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Look for a valid single-candle liquidity sweep on the higher timeframe (HTF) at a key structural level (e.g., previous swing high/low, institutional level).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Enter long only after a bullish liquidity sweep (sell-side liquidity cleared) followed by a confirmed Change of Character (CHoCH) on a lower timeframe (e.g., 15M/1H).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Enter short only after a bearish liquidity sweep (buy-side liquidity cleared) followed by a confirmed Change of Character (CHoCH) on a lower timeframe (e.g., 15M/1H).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After displacement and FVG formation, use Fibonacci 61.8%\u201378.6% retracement for Optimal Trade Entry (OTE) within the identified order block.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Ensure the entry aligns with the higher timeframe bias, or is a clear counter-trend mean-reversion play at an extreme, confirmed by the liquidity sweep and CHoCH.",
+      "confidence": 0.85,
+      "source": "expert_design"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: target the next significant swing high (next buy-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For liquidity sweep shorts: target the next significant swing low (next sell-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Set final take-profit at structural highs (for longs) or structural lows (for shorts) that represent clear liquidity targets.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider taking partial profits (e.g., 50%) at intermediate structural levels or a 1:1 Risk-Reward ratio to de-risk the trade, especially given high volatility.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Implement a trailing stop loss or move stop to breakeven once a significant profit target (e.g., 1R or partial profit target) is reached to protect gains.",
+      "confidence": 0.8
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Place stop loss above the order block for short trades (bearish setup).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage, which is crucial in high volatility environments like LTC_USD.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Limit risk to a fixed percentage of trading capital per trade (e.g., 1-2%) to manage drawdowns effectively and ensure long-term survival.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Calculate position size based on the distance to the stop loss and the fixed risk percentage to ensure consistent risk exposure regardless of volatility.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Maintain a minimum Risk-Reward ratio of 1:2 or higher for all trades to ensure profitability over time, even with a moderate win rate.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Market Structure (Higher Highs/Lows, Lower Highs/Lows)",
+    "Liquidity Pools (Swing Highs/Lows)",
+    "Fair Value Gaps (FVG)",
+    "Order Blocks (OB)",
+    "Fibonacci Retracement Tool (specifically 61.8-78.6% for OTE)",
+    "Change of Character (CHoCH) patterns"
+  ],
+  "market_structure": [
+    "Identification of primary trend direction on higher timeframes (HTF).",
+    "Recognition of key structural highs and lows for liquidity pools.",
+    "Detection of liquidity sweeps (manipulation) at these structural levels.",
+    "Identification of Order Blocks as potential areas of institutional interest.",
+    "Confirmation of Change of Character (CHoCH) on lower timeframes (LTF)."
+  ],
+  "psychology": [
+    "Strict adherence to the trading plan and risk management rules is paramount.",
+    "Patience to wait for high-probability setups (liquidity sweep + CHoCH + OTE) and avoid impulsive trades.",
+    "Emotional control during high volatility periods and potential drawdowns.",
+    "Avoidance of overtrading, especially in weak trend environments where setups might be less frequent or clear.",
+    "Acceptance of losses as part of trading and focusing on consistent execution."
+  ],
+  "adaptations": [
+    {
+      "characteristic": "mean_reverting",
+      "adaptation": "The core of this strategy \u2013 liquidity sweeps followed by CHoCH \u2013 is exceptionally well-suited for mean-reverting assets like LTC_USD. It focuses on catching reversals at market extremes, where price is likely to revert to a mean or previous structural level. Prioritize these reversal patterns over pure trend continuation."
+    },
+    {
+      "characteristic": "high_volatility",
+      "adaptation": "High volatility in LTC_USD means larger price swings, which can lead to clearer displacement and FVG formation, offering distinct entry points. However, it also necessitates wider stop losses. Strict position sizing based on a fixed risk percentage per trade is critical to manage exposure. Be prepared for rapid moves to targets or stops."
+    },
+    {
+      "characteristic": "weak_trend",
+      "adaptation": "Given LTC_USD's weak trend characteristic, the strategy should emphasize the *reversal* aspect of the ICT concepts. While identifying a higher timeframe bias is important, be flexible and ready to trade counter-trend moves that align with mean reversion after a liquidity sweep. Avoid chasing breakouts in weak trend environments, as they are prone to failure and whipsaws."
+    },
+    {
+      "characteristic": "multi_timeframe",
+      "adaptation": "Utilize a clear multi-timeframe approach: a Higher Timeframe (HTF, e.g., 4H/Daily) for identifying primary trend, key structural levels, and liquidity sweeps, and a Lower Timeframe (LTF, e.g., 15M/1H) for precise entry confirmation (CHoCH, FVG, OTE). This filters noise and improves entry accuracy in a volatile market."
+    }
+  ],
+  "overall_confidence": 0.87,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "LTC_USD",
+  "_timestamp": "2026-06-03 12:50:03.211424"
+}

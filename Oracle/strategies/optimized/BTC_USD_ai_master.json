@@ -1,0 +1,96 @@
+{
+  "name": "Master Strategy for BTC_USD",
+  "symbol": "BTC_USD",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend on a Higher Timeframe (HTF) using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend). This sets the directional bias.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Wait for a valid single-candle liquidity sweep on the HTF (sell-side liquidity cleared for long, buy-side liquidity cleared for short). This indicates a potential exhaustion of the current move and a possible reversal or continuation after a false break, aligning with mean-reverting behavior.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "On a Lower Timeframe (LTF), confirm a Change of Character (CHoCH) in the direction of the intended trade, signaling a shift in short-term market structure and confirming the HTF liquidity sweep's intent.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After CHoCH and clear displacement (strong move away from the liquidity sweep), identify a Fair Value Gap (FVG) and use Fibonacci 61.8%\u201378.6% retracement for Optimal Trade Entry (OTE) within the FVG or an identified Order Block. This targets a high-probability entry point within a mean-reverting retracement.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades, target the next significant structural high (next buy-side liquidity pool).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short trades, target the next significant structural low (next sell-side liquidity pool).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate structural levels or a predefined minimum risk-reward ratio (e.g., 1:2), especially given BTC_USD's high volatility. This locks in gains and reduces exposure in a mean-reverting, weak-trend environment.",
+      "confidence": 0.9,
+      "source": "expert_design"
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup) or above the order block for short trades (bearish setup). This provides structural protection.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage and account for wicks, which is crucial in high-volatility assets like BTC_USD.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Adjust position size based on a fixed percentage of capital risked per trade (e.g., 1-2%), ensuring the stop loss distance is accounted for. This is paramount for managing high volatility.",
+      "confidence": 0.9,
+      "source": "expert_design"
+    },
+    {
+      "rule": "Consider using Average True Range (ATR) to dynamically adjust stop loss distance to current volatility, preventing premature stops in highly volatile conditions while maintaining appropriate risk.",
+      "confidence": 0.9,
+      "source": "expert_design"
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL)",
+    "Lower Highs (LH) / Lower Lows (LL)",
+    "Liquidity Sweeps (clearance of sell-side or buy-side liquidity)",
+    "Change of Character (CHoCH)",
+    "Fair Value Gap (FVG)",
+    "Order Blocks",
+    "Swing Highs/Lows (as liquidity pools)",
+    "Displacement (strong impulsive move)"
+  ],
+  "psychology": [],
+  "adaptations": [
+    "Multi-Timeframe Analysis: Utilize Higher Timeframes (HTF) for identifying overall bias and significant liquidity pools, and Lower Timeframes (LTF) for precise entry confirmation (CHoCH) and Optimal Trade Entry (OTE). This provides context and precision.",
+    "Volatility Management: Given BTC_USD's high volatility, prioritize robust stop loss placement (order block + buffer) and consider dynamic stop adjustments (e.g., ATR-based) or smaller position sizing to manage risk effectively and avoid being stopped out by normal market noise.",
+    "Mean Reversion Focus: The strategy is inherently designed to capitalize on mean-reverting tendencies by identifying exhaustion of moves (liquidity sweeps at extremes) and entering on retracements (OTE) within the new short-term bias. This aligns perfectly with the symbol's characteristics.",
+    "Weak Trend Adaptation: Focus on capturing moves between defined structural points rather than aiming for prolonged trend-following, as BTC_USD exhibits weak overall trends. This aligns with the structural target approach and partial profit taking."
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "BTC_USD",
+  "_timestamp": "2026-06-03 12:51:30.658678",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "BTC_USD",
+  "optimization_score": 81.2,
+  "_optimized_at": "2026-06-14 03:12:39.126692",
+  "entry_tf": "30min"
+}

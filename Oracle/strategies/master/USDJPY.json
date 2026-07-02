@@ -1,0 +1,93 @@
+{
+  "name": "Master Strategy for USDJPY",
+  "symbol": "USDJPY",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify the prevailing higher timeframe bias using market structure (higher highs/higher lows for bullish bias; lower highs/lower lows for bearish bias). This provides the directional preference for entries, acknowledging that mean-reverting reversals against a weak immediate trend are valid.",
+      "confidence": 95.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Long entries: Execute only after a bullish liquidity sweep (sell-side liquidity cleared below a key low/support) followed by a clear Change of Character (CHoCH) confirmation to bullish on a lower timeframe. Ideally, this aligns with the higher timeframe bullish bias or a significant mean-reversion point.",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Short entries: Execute only after a bearish liquidity sweep (buy-side liquidity cleared above a key high/resistance) followed by a clear Change of Character (CHoCH) confirmation to bearish on a lower timeframe. Ideally, this aligns with the higher timeframe bearish bias or a significant mean-reversion point.",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target previous structural highs/lows, identified order blocks, or fair value gaps as profit targets. Prioritize realistic targets given the low volatility and mean-reverting nature.",
+      "confidence": 88.0
+    },
+    {
+      "rule": "Implement partial profit taking at initial targets to secure gains and reduce risk on remaining position.",
+      "confidence": 85.0
+    },
+    {
+      "rule": "Consider a time-based exit if the trade fails to develop momentum or reach targets within a predefined period, especially in choppy conditions.",
+      "confidence": 80.0
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place a protective Stop Loss logically beyond the liquidity sweep or the structural low/high that confirmed the Change of Character (CHoCH).",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Limit risk per trade to a maximum of 0.5% - 1% of total trading capital, adjusting position size accordingly.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Aim for a minimum Risk-to-Reward ratio of 1:1 to 1:1.5, adjusting expectations for the low volatility and mean-reverting environment.",
+      "confidence": 85.0
+    },
+    {
+      "rule": "Avoid overtrading in choppy conditions; prioritize high-conviction setups that align with the strategy's principles.",
+      "confidence": 88.0
+    }
+  ],
+  "indicators": [],
+  "market_structure": [
+    {
+      "rule": "Identify 'Higher Highs' and 'Higher Lows' to confirm an uptrend or bullish bias.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Identify 'Lower Highs' and 'Lower Lows' to confirm a downtrend or bearish bias.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Recognize 'Liquidity Sweeps' as price moving beyond a previous high or low to clear stop-loss orders before reversing.",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Confirm 'Change of Character (CHoCH)' as a break of the immediate short-term market structure in the opposite direction of the liquidity sweep, signaling a potential reversal.",
+      "confidence": 90.0
+    }
+  ],
+  "psychology": [],
+  "adaptations": [
+    {
+      "rule": "Utilize higher timeframes (e.g., H4, Daily) for identifying overall market structure and bias, and lower timeframes (e.g., M15, M5) for precise entry confirmations (CHoCH).",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Given USDJPY's low volatility and mean-reverting nature, prioritize setups that capitalize on reversals from key liquidity zones rather than extended trend-following moves.",
+      "confidence": 92.0
+    },
+    {
+      "rule": "Be patient and wait for clear liquidity sweeps and CHoCH confirmations; avoid chasing price in choppy conditions.",
+      "confidence": 88.0
+    }
+  ],
+  "overall_confidence": 90.0,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDJPY",
+  "_timestamp": "2026-06-26 23:13:10.243201"
+}

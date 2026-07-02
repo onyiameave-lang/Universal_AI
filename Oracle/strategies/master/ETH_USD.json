@@ -1,0 +1,89 @@
+{
+  "name": "Master Strategy for ETH_USD",
+  "symbol": "ETH_USD",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the prevailing short-term market structure on a higher timeframe (e.g., 4H, 1H) using HH/HL for bullish bias or LH/LL for bearish bias, providing directional context for mean reversion.",
+      "confidence": 0.9,
+      "source": "ICT/Master (Adapted)"
+    },
+    {
+      "rule": "Confirm a clear liquidity sweep (sell-side for long, buy-side for short) on the HTF or a significant LTF, indicating a potential reversal from an extreme.",
+      "confidence": 0.88,
+      "source": "ICT/Master"
+    },
+    {
+      "rule": "After the liquidity sweep, confirm a Change of Character (CHoCH) on a lower timeframe (e.g., 15M, 5M) in the desired direction (bullish CHoCH for long, bearish CHoCH for short).",
+      "confidence": 0.88,
+      "source": "ICT/Master"
+    },
+    {
+      "rule": "Enter at the Optimal Trade Entry (OTE) zone (Fibonacci 61.8% - 78.6% of the displacement leg) within a Fair Value Gap (FVG) or Order Block (OB) after displacement and CHoCH.",
+      "confidence": 0.88,
+      "source": "ICT/Master"
+    },
+    {
+      "rule": "Confirm entry with increased volume during the displacement or at the OTE retest, indicating institutional interest, especially given high volatility.",
+      "confidence": 0.75,
+      "source": "Expert Improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target the next significant structural high (buy-side liquidity pool) for longs or structural low (sell-side liquidity pool) for shorts, recognizing the weak trend for realistic targets.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Implement partial profit-taking at intermediate structural points or a fixed R-multiple (e.g., 1R or 1.5R) to lock in gains due to high volatility and mean-reverting nature.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Utilize a trailing stop loss to breakeven or a protected level once significant profit (e.g., 1R) is achieved, to manage risk in a volatile environment.",
+      "confidence": 0.7
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss strategically below the order block (for longs) or above the order block (for shorts) that initiated the displacement.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Add a dynamic buffer to the stop loss, adjusted by current Average True Range (ATR), to account for spread, slippage, and high volatility wicks.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Risk a fixed percentage of total capital per trade (e.g., 0.5% - 1%) to ensure consistent position sizing and manage high volatility.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Only take trades with a minimum 1:2 Risk-Reward ratio, aiming for 1:3 or higher, to compensate for potential losses in a volatile market.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool",
+    "Volume Profile",
+    "Average True Range (ATR)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL)",
+    "Lower Highs (LH) / Lower Lows (LL)",
+    "Change of Character (CHoCH)",
+    "Liquidity Sweeps (Sell-Side Liquidity, Buy-Side Liquidity)",
+    "Fair Value Gaps (FVG)",
+    "Order Blocks (OB)",
+    "Displacement"
+  ],
+  "psychology": [],
+  "adaptations": [
+    "Utilize a multi-timeframe approach: Higher Timeframe (HTF) for market structure and liquidity context (e.g., 4H/1H), Lower Timeframe (LTF) for precise entry confirmation (e.g., 15M/5M).",
+    "Manage high volatility by employing wider, ATR-adjusted stop loss buffers, conservative fixed-percentage position sizing, and proactive partial profit-taking.",
+    "Acknowledge the weak trend by focusing on mean-reverting reversals and setting realistic profit targets at the next immediate structural high/low, rather than expecting prolonged trend continuation."
+  ],
+  "overall_confidence": 0.85,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "ETH_USD",
+  "_timestamp": "2026-06-03 12:46:22.431903"
+}

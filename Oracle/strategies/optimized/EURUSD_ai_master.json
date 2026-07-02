@@ -1,0 +1,89 @@
+{
+  "name": "Master Strategy for EURUSD",
+  "symbol": "EURUSD",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "For long entries: Identify a bullish liquidity sweep (sell-side liquidity cleared) followed by a Change of Character (CHoCH) confirmation on a lower timeframe (e.g., M5/M15).",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries: Identify a bearish liquidity sweep (buy-side liquidity cleared) followed by a Change of Character (CHoCH) confirmation on a lower timeframe (e.g., M5/M15).",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Entries should ideally align with the higher timeframe market structure (e.g., H4/Daily) or target clear structural levels within a defined range, capitalizing on mean-reverting tendencies.",
+      "confidence": 88.0,
+      "source": "inferred_symbol_characteristics"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target previous significant highs/lows, order blocks, or fair value gaps as primary profit targets.",
+      "confidence": 85.0
+    },
+    {
+      "rule": "Implement a minimum 1:1.5 Risk-to-Reward ratio for all trades, adjusting for current volatility.",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate structural levels to lock in gains, especially in choppy conditions.",
+      "confidence": 80.0
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss immediately beyond the liquidity sweep point or the CHoCH confirmation candle's extreme to protect capital.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Limit risk per trade to a maximum of 1-2% of total trading capital.",
+      "confidence": 98.0
+    },
+    {
+      "rule": "Utilize proper position sizing based on stop loss distance and the defined risk percentage per trade.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Avoid trading during major high-impact news events to mitigate unexpected volatility and whipsaws.",
+      "confidence": 90.0
+    }
+  ],
+  "indicators": [
+    "Price Action Analysis",
+    "Market Structure Analysis (Higher Highs/Lows, Lower Highs/Lows)",
+    "Liquidity Zones (Previous Highs/Lows, Equal Highs/Lows, Trendline Liquidity)",
+    "Change of Character (CHoCH) on lower timeframes"
+  ],
+  "market_structure": [
+    {
+      "rule": "Identify the primary trend using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend) on higher timeframes (e.g., H4/Daily) to establish directional bias or range context.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Confirm CHoCH on lower timeframes (e.g., M5/M15) as the final trigger for entry after a liquidity sweep.",
+      "confidence": 90.0
+    }
+  ],
+  "psychology": [
+    "Adhere strictly to the defined trading plan and risk management rules without deviation.",
+    "Maintain emotional discipline, avoiding revenge trading, overtrading, or chasing trades.",
+    "Regularly review trade performance and market analysis for continuous improvement and adaptation."
+  ],
+  "adaptations": [
+    "Focus on London and New York trading sessions for better liquidity and potential volatility, avoiding low-volume periods.",
+    "Adjust profit targets and stop loss distances based on current Average Daily Range (ADR) due to EURUSD's low volatility profile.",
+    "Prioritize high-probability setups that show clear confluence of liquidity sweeps, CHoCH, and higher timeframe structural alignment or range boundaries."
+  ],
+  "overall_confidence": 90.0,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "EURUSD",
+  "_timestamp": "2026-06-26 23:11:58.634231",
+  "optimized_for": "EURUSD",
+  "optimization_score": 100.0,
+  "_optimized_at": "2026-06-26 23:11:58.669570",
+  "entry_tf": "daily"
+}

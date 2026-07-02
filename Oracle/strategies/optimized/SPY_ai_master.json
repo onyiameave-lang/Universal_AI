@@ -1,0 +1,103 @@
+{
+  "name": "Master Strategy for SPY (ICT Mean-Reversion)",
+  "symbol": "SPY",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Contextual Trend Identification: First, identify the primary trend on a higher timeframe (e.g., 1H/4H) using market structure (higher highs/higher lows for uptrend; lower highs/lower lows for downtrend). This provides directional bias, though SPY's weak trend suggests looking for reversals within ranges.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Higher Timeframe Liquidity Sweep: Identify a clear single-candle liquidity sweep on the higher timeframe (HTF) \u2013 a move below a swing low (sell-side liquidity) for potential long, or above a swing high (buy-side liquidity) for potential short. This acts as the initial reversal signal.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Lower Timeframe Confirmation (CHoCH): After the HTF liquidity sweep, switch to a lower timeframe (e.g., 5min/15min) and wait for a confirmed Change of Character (CHoCH) in the opposite direction of the sweep. This signifies a shift in short-term market structure.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Optimal Trade Entry (OTE) with FVG: Following the CHoCH and subsequent displacement, look for a Fair Value Gap (FVG) and use the Fibonacci 61.8%\u201378.6% retracement zone within or near the FVG for an Optimal Trade Entry (OTE). This provides a high-probability entry point with favorable risk/reward.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Order Block Confluence: Ensure the OTE zone aligns with a valid order block (bullish for long, bearish for short) for added confluence and strength of the setup.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target Structural Liquidity: For long trades, target the next significant swing high (buy-side liquidity pool). For short trades, target the next significant swing low (sell-side liquidity pool). These are natural price magnets.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Structural Highs/Lows Take-Profit: Set primary take-profit levels at clear structural highs (for longs) or structural lows (for shorts) identified on the relevant timeframe. Consider partial profit taking at intermediate structural levels, especially in choppy conditions.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Adapt to Low Volatility: Given SPY's low volatility, be prepared for smaller moves and potentially tighter profit targets. Adjust expectations accordingly.",
+      "confidence": 0.9
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Stop Loss Placement: For long trades, place the stop loss below the low of the order block or the swing low that initiated the move. For short trades, place the stop loss above the high of the order block or the swing high that initiated the move.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Spread Buffer: Always add a small spread buffer to the stop loss placement to account for slippage and avoid premature stops due to spread widening, especially during volatile news events or market open/close.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Fixed Risk Per Trade: Implement a strict risk management rule, risking no more than 1-2% of total trading capital per trade. This is crucial for capital preservation in any market, particularly in choppy environments.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Position Sizing: Calculate position size based on the distance from the entry to the stop loss, ensuring that the fixed risk percentage is maintained.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Favorable Risk/Reward: Only take trades with a minimum 1:2 or 1:3 risk-to-reward ratio, ensuring that winning trades significantly outweigh losing trades.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for OTE)",
+    "Market Structure (visual identification of highs/lows, breaks)",
+    "Liquidity Pools (visual identification of swing highs/lows)",
+    "Fair Value Gaps (FVG) / Imbalances (visual identification)",
+    "Order Blocks (visual identification)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL) for Uptrend",
+    "Lower Highs (LH) / Lower Lows (LL) for Downtrend",
+    "Liquidity Sweeps (clearance of previous swing highs/lows)",
+    "Change of Character (CHoCH) (break of immediate market structure)",
+    "Fair Value Gaps (FVG) / Imbalances",
+    "Order Blocks (areas of institutional buying/selling)"
+  ],
+  "psychology": [
+    "Patience and Discipline: Wait for high-probability setups that meet all criteria, especially in choppy markets where false signals are common.",
+    "Emotional Control: Adhere strictly to risk management rules and avoid overtrading or revenge trading."
+  ],
+  "adaptations": [
+    "Mean-Reverting Focus: The strategy is inherently designed for mean-reversion, leveraging liquidity sweeps as reversal points within SPY's typical range-bound or weakly trending behavior.",
+    "Low Volatility Adjustment: Smaller price movements in SPY necessitate tighter stop losses and potentially smaller profit targets, emphasizing precision in entry and exit.",
+    "Choppy Market Navigation: The HTF/LTF approach with CHoCH and OTE helps filter out noise and identify clearer directional shifts even in choppy conditions, focusing on institutional footprints.",
+    "Timeframe Selection: Utilize higher timeframes (e.g., 1H, 4H, Daily) for identifying primary market structure and liquidity sweeps, and lower timeframes (e.g., 5min, 15min) for precise entry confirmation (CHoCH, OTE)."
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "SPY",
+  "_timestamp": "2026-06-03 12:48:54.685227",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "SPY",
+  "optimization_score": 96.8,
+  "_optimized_at": "2026-06-14 03:12:40.031281",
+  "entry_tf": "daily"
+}

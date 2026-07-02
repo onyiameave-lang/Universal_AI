@@ -1,0 +1,107 @@
+{
+  "name": "Master Strategy for QQQ",
+  "symbol": "QQQ",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend and market bias on a Higher Timeframe (HTF) using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend). This provides context for mean-reverting moves.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Identify a bullish liquidity sweep (sell-side liquidity cleared) on the HTF, indicating a potential reversal or pullback completion.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short entries: Identify a bearish liquidity sweep (buy-side liquidity cleared) on the HTF, indicating a potential reversal or pullback completion.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After a liquidity sweep, wait for a Change of Character (CHoCH) confirmation on a Lower Timeframe (LTF) to signal a shift in short-term market structure.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following CHoCH and displacement, look for the formation of a Fair Value Gap (FVG) and an Order Block (OB) in the direction of the new short-term trend.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Enter on a retracement into the Optimal Trade Entry (OTE) zone, typically the Fibonacci 61.8%-78.6% range, within the FVG/OB area.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Prioritize setups that occur at extremes of established ranges or after significant deviations from a perceived mean, aligning with QQQ's mean-reverting nature.",
+      "confidence": 0.85,
+      "source": "logical_improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades: Target the next significant swing high or identified buy-side liquidity pool.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Target the next significant swing low or identified sell-side liquidity pool.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider partial profits at intermediate structural highs/lows to manage risk and lock in gains, especially given QQQ's medium volatility.",
+      "confidence": 0.8
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades: Place stop loss below the low of the bullish order block or the swing low that initiated the move.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For short trades: Place stop loss above the high of the bearish order block or the swing high that initiated the move.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always add a small spread buffer (e.g., 5-10 ticks) to the stop loss level to mitigate slippage and avoid premature stops.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Implement a fixed risk percentage per trade (e.g., 0.5% - 1% of trading capital) to ensure consistent position sizing and capital preservation.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Ensure a minimum Risk-to-Reward (R:R) ratio of 1:2 or higher for every trade to justify the risk taken.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for Optimal Trade Entry - OTE)",
+    "Volume (to confirm liquidity sweeps and displacement strength - logical improvement)",
+    "Price Action Analysis (for identifying market structure, liquidity, FVG, Order Blocks, CHoCH)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL) for Uptrend",
+    "Lower Highs (LH) / Lower Lows (LL) for Downtrend",
+    "Liquidity Pools (Buy-Side Liquidity - BSL, Sell-Side Liquidity - SSL)",
+    "Order Blocks (OB)",
+    "Fair Value Gaps (FVG) / Imbalances",
+    "Change of Character (CHoCH) / Market Structure Shift (MSS)"
+  ],
+  "psychology": [
+    "Maintain discipline in waiting for full confirmation of all entry criteria.",
+    "Avoid chasing trades; wait for price to retrace to the OTE zone.",
+    "Manage emotions during drawdowns and adhere strictly to risk management rules."
+  ],
+  "adaptations": [
+    "**Multi-Timeframe Analysis:** Use HTF (e.g., Daily/4H) for overall bias and liquidity identification, and LTF (e.g., 15min/5min) for precise entry confirmation (CHoCH, FVG, OTE).",
+    "**Mean-Reversion Focus:** For QQQ's mean-reverting nature, prioritize setups that occur after significant extensions away from a mean or at clear range boundaries, looking for reversals back towards the equilibrium.",
+    "**Volatility Adjustment:** Given medium volatility, be mindful of wider stop losses and adjust position sizing accordingly to maintain fixed risk percentage.",
+    "**Weak Trend Consideration:** While ICT can identify trends, for QQQ's 'weak trend' characteristic, be prepared for shorter-term trends and quicker reversals. Focus on capturing moves between liquidity pools rather than extended trend-following."
+  ],
+  "overall_confidence": 0.87,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "QQQ",
+  "_timestamp": "2026-06-03 12:48:28.738698"
+}

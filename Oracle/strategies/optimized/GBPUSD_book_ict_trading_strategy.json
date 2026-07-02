@@ -1,0 +1,167 @@
+{
+  "_source": "book_ict_trading_strategy",
+  "_topic": "full",
+  "_source_type": "book",
+  "name": "ICT Trading Strategy Strategy",
+  "author": "ICT",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend)",
+      "confidence": 0.95,
+      "source": "SMC / ICT"
+    },
+    {
+      "rule": "Wait for confirmed pattern breakout before entering \u2014 a pattern is only complete on actual breakout",
+      "confidence": 0.92,
+      "source": "Chart Patterns (Fidelity)"
+    },
+    {
+      "rule": "Apply confirmation filters (intrabar, multiple closes, time, percentage) before acting on a breakout",
+      "confidence": 0.87,
+      "source": "Chart Patterns (Fidelity)"
+    },
+    {
+      "rule": "For gap plays: wait for throwback after breakout gap \u2014 if throwback does not fill gap, place buy entry above high of gap bar (pivot)",
+      "confidence": 0.82,
+      "source": "Chart Patterns"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: target next swing high (next buy-side liquidity pool)",
+      "confidence": 0.88,
+      "source": "Liquidity Sweep"
+    },
+    {
+      "rule": "For liquidity sweep shorts: target next swing low (next sell-side liquidity pool)",
+      "confidence": 0.88,
+      "source": "Liquidity Sweep"
+    },
+    {
+      "rule": "Set take-profit at structural highs (for longs) or structural lows (for shorts)",
+      "confidence": 0.9,
+      "source": "SMC / ICT"
+    },
+    {
+      "rule": "Calculate price target for double top/bottom: height from peak to trough projected from breakout point",
+      "confidence": 0.85,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "For Head and Shoulders: target = distance from head to neckline, projected down from neckline break",
+      "confidence": 0.87,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "For triangles: target = height of pattern added to (or subtracted from) breakout price",
+      "confidence": 0.84,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "Exit or tighten stop when gap is violated after gap entry \u2014 trend assumption breaks down",
+      "confidence": 0.8,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "Once in SMC trade, target the next structural high (long) or structural low (short)",
+      "confidence": 0.87,
+      "source": "SMC"
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup)",
+      "confidence": 0.92,
+      "source": "ICT"
+    },
+    {
+      "rule": "Place stop loss above the order block for short trades (bearish setup)",
+      "confidence": 0.92,
+      "source": "ICT"
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage",
+      "confidence": 0.9,
+      "source": "ICT"
+    },
+    {
+      "rule": "Use stop-and-reverse orders on false breakouts: enter on breakout, place protective stop outside breakout bar, and entry stop at same level in opposite direction",
+      "confidence": 0.82,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "Use risk-reward ratio when setting take profit \u2014 fixed ratios (e.g. 1:2, 1:3) are acceptable",
+      "confidence": 0.88,
+      "source": "Liquidity Sweep"
+    },
+    {
+      "rule": "Trading is a game of probability \u2014 never expect 100% win rate; cut losses and let winners run",
+      "confidence": 0.95,
+      "source": "Universal"
+    },
+    {
+      "rule": "Place protective stops based on: trend line / support-resistance level with filter, or percentage/points filter",
+      "confidence": 0.87,
+      "source": "Chart Patterns"
+    },
+    {
+      "rule": "Set stop loss for gap entries initially at gap low, then move below pivot low as trade develops",
+      "confidence": 0.82,
+      "source": "Chart Patterns"
+    }
+  ],
+  "indicators": [
+    {
+      "name": "Relative Strength Index (RSI)",
+      "formula": "RSI = 100 - 100/(1 + RS), where RS = avg up closes / avg down closes over period",
+      "how_to_use": "Momentum oscillator measuring speed and change of price movements; overbought above 70, oversold below 30",
+      "developer": "J. Welles Wilder"
+    },
+    {
+      "name": "Moving Averages",
+      "how_to_use": "Average of closing prices over a period; used for trend direction and crossover signals",
+      "crossover_signal": "When faster MA crosses above slower MA \u2014 bullish; below \u2014 bearish"
+    },
+    {
+      "name": "Volume",
+      "how_to_use": "Confirms breakouts \u2014 high volume on breakout = valid; low volume = suspect. High volume + large price gap near trend end = exhaustion gap"
+    },
+    {
+      "name": "Fibonacci Retracement",
+      "how_to_use": "Key levels: 23.6%, 38.2%, 50%, 61.8%, 78.6%. ICT uses 61.8%-78.6% for OTE. Traders place orders at these levels creating self-fulfilling liquidity zones"
+    }
+  ],
+  "psychology": [
+    "Trading always carries risk \u2014 losses are part of the game; success requires disciplined execution",
+    "Do not see patterns where there are none \u2014 human tendency to find patterns is dangerous",
+    "Do not stick with original price targets after conditions have changed",
+    "Patience is required \u2014 ICT/SMC requires waiting for specific market conditions before entry",
+    "Do not look backwards \u2014 focus on forward-looking analysis",
+    "SMC narrows trade opportunities by design \u2014 not every price move is tradeable",
+    "Greater Fool Theory: never buy at any price assuming someone will pay more \u2014 value matters"
+  ],
+  "market_structure": {
+    "trend_identification": {
+      "uptrend": "Series of higher highs and higher lows",
+      "downtrend": "Series of lower highs and lower lows",
+      "break_of_structure_BOS": "Price sets a new high or low while breaking through former ones \u2014 signals trend continuation",
+      "change_of_character_CHOCH": "Sudden shift in volatility, volume, or price action suggesting trend weakness and possible reversal",
+      "market_structure_shift_MSS": "In an uptrend: a lower low forms. In a downtrend: a higher high forms. Usually follows displacement"
+    },
+    "support_and_resistance": {
+      "support": "Price level where demand is strong enough to prevent further decline; buyers step in as price cheapens",
+      "resistance": "Price level where selling pressure prevents further advance; sellers increase and buyers decrease",
+      "role_reversal": "A broken resistance level becomes new support, and vice versa"
+    }
+  },
+  "chart_patterns": [],
+  "key_concepts": [],
+  "confidence": 0.8800000000000001,
+  "_adaptation": "trend_following",
+  "_confidence_threshold": 0.6,
+  "optimized_for": "GBPUSD",
+  "optimization_score": 95.6,
+  "symbol_type": "mean_reverting_choppy",
+  "_optimized_at": "2026-06-26 23:12:11.486545",
+  "entry_tf": "daily"
+}

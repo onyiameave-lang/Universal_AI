@@ -1,0 +1,97 @@
+{
+  "name": "Optimized Master Strategy for NZDUSD",
+  "symbol": "NZDUSD",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend using market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend) to establish context for mean reversion.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Enter long only after a bullish liquidity sweep (sell-side liquidity cleared) on a higher timeframe (HTF) followed by a Change of Character (CHoCH) confirmation on a lower timeframe (LTF).",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Enter short only after a bearish liquidity sweep (buy-side liquidity cleared) on a higher timeframe (HTF) followed by a Change of Character (CHoCH) confirmation on a lower timeframe (LTF).",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Look for valid single-candle liquidity sweep on higher timeframe (HTF) before seeking entry on lower timeframe (LTF) for precision.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Use Fibonacci 61.8%\u201378.6% retracement for Optimal Trade Entry (OTE) after displacement and Fair Value Gap (FVG) formation, confirming a strong impulse move.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: target the next significant swing high (next buy-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For liquidity sweep shorts: target the next significant swing low (next sell-side liquidity pool).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Set take-profit at structural highs (for longs) or structural lows (for shorts), aligning with the mean-reverting nature of NZDUSD.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate structural levels or opposing liquidity pools to secure gains, especially given the low volatility and choppy nature.",
+      "confidence": 0.92
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup), allowing for a buffer.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Place stop loss above the order block for short trades (bearish setup), allowing for a buffer.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage, particularly important in low volatility environments where spreads can widen.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Implement strict position sizing based on a fixed percentage of capital per trade (e.g., 1-2%) to manage overall portfolio risk effectively.",
+      "confidence": 0.95
+    }
+  ],
+  "indicators": [
+    "Fair Value Gap (FVG)",
+    "Order Blocks",
+    "Liquidity Pools (Sell-side/Buy-side)",
+    "Fibonacci Retracement (for Optimal Trade Entry)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL) for Uptrend identification",
+    "Lower Highs (LH) / Lower Lows (LL) for Downtrend identification",
+    "Change of Character (CHoCH) for confirming short-term trend shifts/reversals",
+    "Liquidity Sweeps (identifying manipulation and potential reversal points)"
+  ],
+  "adaptations": [
+    "Prioritize high-probability setups with clear HTF liquidity sweeps and LTF CHoCH, as low volatility can lead to less decisive moves and more false signals.",
+    "Given the 'mean_reverting_choppy' nature, focus on capturing swings between established liquidity zones rather than attempting to ride long trends. Be prepared for frequent reversals.",
+    "Be mindful of tighter ranges in low volatility; adjust profit targets to realistic swing highs/lows and emphasize partial profit taking to secure gains.",
+    "Avoid trading during extremely low volume periods or when price action is extremely tight, as this can lead to whipsaws and unclear signals. Focus on periods with clearer liquidity events.",
+    "Ensure sufficient displacement and FVG clarity even in low volatility environments; avoid ambiguous setups where price action is not distinct.",
+    "Consider using slightly wider stop losses than usual for low volatility pairs to account for potential spread widening and minor whipsaws, while maintaining a good risk-to-reward ratio."
+  ],
+  "overall_confidence": 0.92,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "NZDUSD",
+  "_timestamp": "2026-06-23 13:28:22.227581",
+  "optimized_for": "NZDUSD",
+  "optimization_score": 95.52,
+  "_optimized_at": "2026-06-26 23:12:11.645622",
+  "entry_tf": "daily"
+}

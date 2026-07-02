@@ -1,0 +1,101 @@
+{
+  "name": "Master Strategy for USDJPYX",
+  "symbol": "USDJPYX",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify the prevailing market structure on a Higher Timeframe (HTF, e.g., 1H/4H) using higher highs/higher lows for an uptrend bias or lower highs/lower lows for a downtrend bias. This establishes the directional context for potential mean-reverting swings.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For long entries, wait for a clear bullish liquidity sweep (sell-side liquidity cleared) on the HTF, indicating a potential reversal from a low.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries, wait for a clear bearish liquidity sweep (buy-side liquidity cleared) on the HTF, indicating a potential reversal from a high.",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "After an HTF liquidity sweep, drop to a Lower Timeframe (LTF, e.g., 5M/15M) and confirm a Change of Character (CHoCH) in the direction of the intended trade (e.g., bullish CHoCH for longs).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Following displacement and the formation of a Fair Value Gap (FVG) on the LTF, look for price to retrace into the Fibonacci 61.8%\u201378.6% retracement zone (Optimal Trade Entry - OTE) within the FVG or an order block for a refined entry.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades, target the next significant structural high or identified buy-side liquidity pool. For short trades, target the next significant structural low or identified sell-side liquidity pool.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Given the low volatility and choppy nature of USDJPYX, implement partial profit taking at intermediate structural points or when a 1:1 Risk-to-Reward (RR) ratio is achieved, moving the stop loss to breakeven.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Consider trailing the stop loss below/above recent swing lows/highs once a significant move develops to protect accumulated profits, especially if the trade extends beyond initial targets.",
+      "confidence": 0.8
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades, place the stop loss structurally below the order block or the low of the liquidity sweep candle. For short trades, place it above the order block or the high of the liquidity sweep candle.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Always add a small spread buffer (e.g., 1-3 pips for USDJPYX) to the stop loss to account for spread expansion and potential slippage, particularly in low volatility conditions.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Risk a fixed, small percentage (e.g., 0.5% - 1%) of total trading capital per trade to ensure robust position sizing and effective drawdown management.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Aim for a minimum Risk-to-Reward ratio of 1:1.5 or 1:2, but adjust profit expectations realistically for the low volatility and choppy characteristics of USDJPYX.",
+      "confidence": 0.85
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for Optimal Trade Entry - OTE)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL) for bullish bias",
+    "Lower Highs (LH) / Lower Lows (LL) for bearish bias",
+    "Change of Character (CHoCH) for short-term reversal confirmation",
+    "Liquidity Sweeps (clearing sell-side or buy-side liquidity)",
+    "Order Blocks (OB) for support/resistance and stop placement",
+    "Fair Value Gaps (FVG) for refined entry zones"
+  ],
+  "psychology": [
+    "Patience is paramount: Wait for clear HTF liquidity sweeps and LTF CHoCH confirmations. Avoid impulsive entries.",
+    "Discipline: Strictly adhere to the defined entry, exit, and risk management rules.",
+    "Adaptability: Understand that not every setup will be perfect; focus on the probabilistic edge and process.",
+    "Realistic Expectations: Given low volatility, prioritize consistent, smaller gains over chasing large, infrequent moves."
+  ],
+  "adaptations": [
+    "**Mean-Reverting Focus:** While identifying a directional bias, prioritize trading reversals within established ranges or against short-term extremes, rather than expecting long, sustained trend continuations.",
+    "**Low Volatility Adjustment:** Be realistic with profit targets. Smaller, consistent gains are more achievable. Consider tighter profit targets or more aggressive partial profit taking strategies.",
+    "**Choppy Market Avoidance:** Exercise caution or avoid trading during extremely tight consolidation periods where liquidity sweeps might be less reliable or lead to whipsaws. Look for clear price action and structural breaks.",
+    "**Multi-Timeframe Application:** Utilize Higher Timeframes (e.g., 1H/4H) for identifying overall bias and significant liquidity sweeps, and Lower Timeframes (e.g., 5M/15M) for precise entry confirmation (CHoCH) and OTE.",
+    "**Confluence:** Seek additional confluence, such as trading during high-liquidity sessions (e.g., London/New York overlap) or observing divergence on momentum indicators (if applicable) to strengthen trade conviction."
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDJPYX",
+  "_timestamp": "2026-06-03 12:49:37.684640",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "USDJPYX",
+  "optimization_score": 81.8,
+  "_optimized_at": "2026-06-14 03:12:40.208172",
+  "entry_tf": "daily"
+}

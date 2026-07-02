@@ -1,0 +1,114 @@
+{
+  "name": "Master Strategy for GOOGL",
+  "symbol": "GOOGL",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary trend and market structure on a higher timeframe (HTF) to establish directional bias or range context.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Wait for price to make a significant deviation from a short-term moving average (e.g., 20-period EMA) indicating potential mean reversion.",
+      "confidence": 0.75,
+      "source": "Logical Improvement"
+    },
+    {
+      "rule": "Identify a valid liquidity sweep (sell-side for long, buy-side for short) on the HTF, indicating exhaustion of the prior move.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Confirm the liquidity sweep with a Change of Character (CHoCH) on a lower timeframe (LTF), signaling a shift in short-term momentum.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "After displacement and Fair Value Gap (FVG) formation, use Fibonacci 61.8%\u201378.6% retracement for Optimal Trade Entry (OTE) within the FVG or order block.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Look for increased volume during the liquidity sweep or displacement candle as a secondary confirmation of conviction.",
+      "confidence": 0.7,
+      "source": "Logical Improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target the next significant structural high (for longs) or structural low (for shorts) as primary take-profit levels.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "For liquidity sweep longs, target the next buy-side liquidity pool; for shorts, target the next sell-side liquidity pool.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Consider scaling out of positions at intermediate structural levels due to the weak trend characteristic of GOOGL, securing partial profits.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Ensure a minimum risk-reward ratio of 1:1.5 or higher for every trade.",
+      "confidence": 0.85
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block for long trades (bullish setup) or above the order block for short trades (bearish setup).",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage, especially given high volatility.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Limit the risk per trade to a maximum of 1-2% of the total trading capital.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Adjust position size based on the volatility of GOOGL and the distance to the stop loss, ensuring consistent dollar risk per trade.",
+      "confidence": 0.9
+    }
+  ],
+  "indicators": [
+    {
+      "name": "Fibonacci Retracement Tool",
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "name": "Volume Profile / Volume Indicator",
+      "source": "Logical Improvement"
+    },
+    {
+      "name": "Moving Averages (e.g., 20-period EMA)",
+      "source": "Logical Improvement"
+    }
+  ],
+  "market_structure": [
+    "Higher Highs / Higher Lows (Uptrend)",
+    "Lower Highs / Lower Lows (Downtrend)",
+    "Liquidity Pools (Buy-side / Sell-side)",
+    "Order Blocks",
+    "Fair Value Gaps (FVG)",
+    "Change of Character (CHoCH)",
+    "Displacement"
+  ],
+  "psychology": [],
+  "adaptations": [
+    "Utilize multi-timeframe analysis (HTF for context, LTF for precise entry) to filter noise and confirm setups in a high-volatility environment.",
+    "Prioritize reversal setups at key liquidity points, aligning with GOOGL's mean-reverting nature.",
+    "Adjust stop loss distances to account for GOOGL's high volatility, using the order block and buffer method.",
+    "Due to the weak trend, consider scaling out of positions at intermediate structural targets to secure profits and manage risk.",
+    "Incorporate volume analysis to confirm the conviction behind liquidity sweeps and displacement moves.",
+    "Filter setups by looking for price extension from a short-term mean (e.g., 20 EMA) to enhance mean-reversion probability."
+  ],
+  "overall_confidence": 0.87,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "GOOGL",
+  "_timestamp": "2026-06-03 12:47:54.039361",
+  "optimized_for": "GOOGL",
+  "optimization_score": 88.13,
+  "_optimized_at": "2026-06-14 03:12:39.622327",
+  "entry_tf": "30min"
+}

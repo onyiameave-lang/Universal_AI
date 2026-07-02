@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Universal AI Chat</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #15171a;
+      --muted: #667085;
+      --border: #d0d5dd;
+      --user: #0b5cad;
+      --assistant: #eef2f6;
+      --assistant-text: #182230;
+      --danger: #b42318;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --panel: #171c22;
+        --text: #eef2f6;
+        --muted: #98a2b3;
+        --border: #344054;
+        --user: #2e90fa;
+        --assistant: #232b35;
+        --assistant-text: #f2f4f7;
+        --danger: #f97066;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: min(920px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--panel);
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: 0;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .messages {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      overflow-y: auto;
+      padding: 18px;
+    }
+
+    .message {
+      max-width: min(76%, 680px);
+      padding: 12px 14px;
+      border-radius: 8px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: var(--user);
+      color: #fff;
+    }
+
+    .message.assistant {
+      align-self: flex-start;
+      background: var(--assistant);
+      color: var(--assistant-text);
+    }
+
+    .message.error {
+      color: var(--danger);
+      border: 1px solid color-mix(in srgb, var(--danger) 38%, transparent);
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    textarea {
+      width: 100%;
+      max-height: 180px;
+      min-height: 46px;
+      resize: none;
+      padding: 12px;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font: inherit;
+      line-height: 1.35;
+    }
+
+    button {
+      min-width: 88px;
+      height: 46px;
+      padding: 0 18px;
+      color: #fff;
+      background: var(--user);
+      border: 0;
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    @media (max-width: 640px) {
+      .app {
+        border: 0;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .message {
+        max-width: 92%;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Universal AI Chat</h1>
+      <div class="status" id="status">Ready</div>
+    </header>
+
+    <section class="messages" id="messages" aria-live="polite"></section>
+
+    <form id="chat-form">
+      <textarea id="message-input" rows="1" placeholder="Message Universal AI..." autofocus></textarea>
+      <button id="send-button" type="submit">Send</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("message-input");
+    const messages = document.getElementById("messages");
+    const sendButton = document.getElementById("send-button");
+    const statusText = document.getElementById("status");
+    const conversationId = localStorage.getItem("universalAiConversationId")
+      || crypto.randomUUID();
+
+    localStorage.setItem("universalAiConversationId", conversationId);
+
+    function addMessage(role, text, isError = false) {
+      const bubble = document.createElement("div");
+      bubble.className = `message ${role}${isError ? " error" : ""}`;
+      bubble.textContent = text;
+      messages.appendChild(bubble);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function resizeInput() {
+      input.style.height = "auto";
+      input.style.height = `${Math.min(input.scrollHeight, 180)}px`;
+    }
+
+    input.addEventListener("input", resizeInput);
+
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      addMessage("user", text);
+      input.value = "";
+      resizeInput();
+      sendButton.disabled = true;
+      statusText.textContent = "Thinking...";
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text, conversationId })
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || data.details || "Chat request failed");
+        }
+
+        addMessage("assistant", data.response || "");
+        statusText.textContent = data.intent ? `Intent: ${data.intent}` : "Ready";
+      } catch (error) {
+        addMessage("assistant", error.message, true);
+        statusText.textContent = "Error";
+      } finally {
+        sendButton.disabled = false;
+        input.focus();
+      }
+    });
+
+    addMessage("assistant", "Hi. I am connected to your Universal AI Ecosystem. What should we work on?");
+  </script>
+</body>
+</html>

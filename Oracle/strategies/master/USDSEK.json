@@ -1,0 +1,110 @@
+{
+  "name": "Master Strategy for USDSEK",
+  "symbol": "USDSEK",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify higher timeframe market structure to define the prevailing range or weak bias (e.g., HH/HL for weak uptrend, LH/LL for weak downtrend, or clear range boundaries). This provides context for mean-reversion.",
+      "confidence": 0.95,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For long entries: Price must sweep sell-side liquidity (below a previous low or support level) at the lower extreme of the defined range/bias, indicating a potential reversal.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For long entries: Following the liquidity sweep, confirm a Change of Character (CHoCH) on a lower timeframe, indicating a shift from bearish to bullish market structure and validating the reversal.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries: Price must sweep buy-side liquidity (above a previous high or resistance level) at the upper extreme of the defined range/bias, indicating a potential reversal.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries: Following the liquidity sweep, confirm a Change of Character (CHoCH) on a lower timeframe, indicating a shift from bullish to bearish market structure and validating the reversal.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target previous significant structure highs/lows within the range, or the mean/equilibrium of the higher timeframe range, as primary profit targets.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate structure points or after a certain percentage gain to lock in gains in a low volatility environment.",
+      "confidence": 0.8
+    },
+    {
+      "rule": "Exit if price re-tests the liquidity sweep point and breaks significantly beyond it, indicating continuation of the initial move rather than reversal.",
+      "confidence": 0.85
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place initial stop-loss beyond the liquidity sweep point (e.g., 1-2 ATR below/above the sweep low/high) to protect against re-tests and false breakouts.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Maintain a minimum 1:1.5 or 1:2 Risk-Reward ratio for all trades, adjusting for low volatility to ensure achievable targets and positive expectancy.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Implement a maximum per-trade risk of 0.5% - 1% of total capital, considering the low volatility and choppy nature of USDSEK to preserve capital.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Consider a maximum daily drawdown limit (e.g., 2-3% of capital) to prevent overtrading or significant losses during unfavorable market conditions.",
+      "confidence": 0.8
+    }
+  ],
+  "indicators": [
+    {
+      "name": "Price Action & Market Structure",
+      "description": "Primary focus on raw price movement, identification of swing highs/lows, structural breaks, and liquidity zones.",
+      "confidence": 0.95
+    }
+  ],
+  "market_structure": [
+    {
+      "rule": "Higher Timeframe Market Structure: Define overall range or weak trend (HH/HL for uptrend, LH/LL for downtrend) to establish the broader context for mean-reversion.",
+      "confidence": 0.95
+    },
+    {
+      "rule": "Lower Timeframe Market Structure: Confirm CHoCH (break of previous swing high/low) for precise entry validation after liquidity sweeps, signaling a shift in short-term momentum.",
+      "confidence": 0.9
+    }
+  ],
+  "psychology": [
+    {
+      "rule": "Adhere strictly to the defined risk management rules and trade plan to avoid emotional trading decisions, especially in choppy, low-volatility markets.",
+      "confidence": 0.85
+    },
+    {
+      "rule": "Avoid overtrading; wait patiently for high-probability setups that clearly align with liquidity sweeps and CHoCH confirmations.",
+      "confidence": 0.8
+    }
+  ],
+  "adaptations": [
+    {
+      "rule": "Focus on fading extremes of ranges or short-term deviations from the mean, rather than strong trend following, which is less effective for USDSEK's mean-reverting nature.",
+      "confidence": 0.9
+    },
+    {
+      "rule": "Prioritize high-probability setups with clear liquidity sweeps and strong CHoCH confirmations due to low volatility, requiring precision in entries and exits.",
+      "confidence": 0.88
+    },
+    {
+      "rule": "Adjust position sizing to account for smaller average true ranges (ATR) in a low volatility environment, ensuring appropriate risk per trade without being too small to capture moves.",
+      "confidence": 0.85
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDSEK",
+  "_timestamp": "2026-06-26 23:13:33.351496"
+}

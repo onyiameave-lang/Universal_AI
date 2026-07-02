@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal AI Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #F7F7F7;
+            margin: 0;
+        }
+
+        .hairline {
+            border: 1px solid #2A3439;
+        }
+
+        .accent-amber {
+            color: #FFBF00;
+        }
+
+        .bg-amber {
+            background-color: #FFBF00;
+        }
+
+        .border-amber {
+            border-color: #FFBF00;
+        }
+
+        .bg-amber {
+            background-color: #FFBF00 !important;
+        }
+
+        .border-amber {
+            border-color: #FFBF00 !important;
+        }
+
+        .interactive {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .interactive:active {
+            transform: scale(0.98);
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2A3439;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFBF00;
+        }
+
+        .terminal-text {
+            font-family: 'ui-monospace', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+        }
+
+        @keyframes pulse-amber {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .pulse-amber {
+            animation: pulse-amber 2s infinite;
+        }
+
+        /* --- Animation Keyframes --- */
+        @keyframes pulse-amber {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-in-from-left {
+            from {
+                transform: translateX(-16px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes highlight-update {
+
+            0%,
+            100% {
+                color: #F7F7F7;
+            }
+
+            50% {
+                color: #FFBF00;
+            }
+        }
+
+        /* --- Animation Utility Classes --- */
+        .pulse-amber {
+            animation: pulse-amber 1.5s infinite;
+        }
+
+        .panel-bg {
+            background-color: #111111;
+        }
+
+        .chat-glow {
+            background: radial-gradient(circle at center, rgba(255, 191, 0, 0.02) 0%, transparent 70%);
+        }
+
+        .animate-in {
+            animation: fade-in 0.5s ease-out, slide-in-from-left 0.5s ease-out;
+        }
+
+        .highlight {
+            animation: highlight-update 0.8s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-screen overflow-hidden">
+
+    <!-- Top Command Bar -->
+    <header class="grid grid-cols-4 gap-0 border-b border-[#2A3439] bg-[#0F0F0F] z-20">
+        <div class="p-6 border-r border-[#2A3439]">
+            <span class="text-[10px] text-[#666666] font-bold uppercase tracking-[0.25em] block mb-1">Total
+                Embeddings</span>
+            <div id="stat-concepts" class="text-2xl font-medium tracking-tighter">0</div>
+        </div>
+        <div class="p-6 border-r border-[#2A3439]">
+            <span class="text-[10px] text-[#666666] font-bold uppercase tracking-[0.25em] block mb-1">Active
+                Agents</span>
+            <div id="stat-agents" class="text-2xl font-medium tracking-tighter">0</div>
+        </div>
+        <div class="p-6 border-r border-[#2A3439]">
+            <span class="text-[10px] text-[#666666] font-bold uppercase tracking-[0.25em] block mb-1">Active
+                Sessions</span>
+            <div id="stat-sessions" class="text-2xl font-medium tracking-tighter accent-amber">0</div>
+        </div>
+        <div class="p-6">
+            <span class="text-[10px] text-[#666666] font-bold uppercase tracking-[0.25em] block mb-1">System
+                Health</span>
+            <div id="stat-health"
+                class="text-2xl font-medium tracking-tighter text-green-500 flex items-center gap-2 uppercase">
+                <i class="ti ti-bolt-filled text-lg pulse-amber"></i> Nominal
+            </div>
+        </div>
+    </header>
+
+    <div class="flex-1 flex overflow-hidden">
+
+        <!-- Left Pane: Agent Registry -->
+        <aside class="w-80 flex-shrink-0 flex flex-col border-r border-[#2A3439] panel-bg z-10">
+            <div class="p-4 border-b border-[#2A3439] flex items-center justify-between">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#666666]">Agent Registry</h2>
+                <div class="flex gap-2">
+                    <i class="ti ti-refresh text-[#666666] hover:text-amber interactive text-xs cursor-pointer"
+                        onclick="syncDashboard()"></i>
+                </div>
+            </div>
+            <div id="agent-list" class="flex-1 overflow-y-auto p-3 space-y-2">
+                <div id="agent-list" class="flex-1 overflow-y-auto p-3 space-y-1">
+                    <div class="p-4 text-xs text-[#666666] animate-pulse uppercase tracking-widest text-center">Loading
+                        Registry...</div>
+                </div>
+                <div class="p-4 border-t border-[#2A3439] bg-[#0A0A0A]">
+                    <button id="spawn-trigger"
+                        class="w-full py-2.5 bg-amber text-[#111111] text-[10px] font-bold uppercase tracking-widest hover:brightness-110 interactive transition-all flex items-center justify-center gap-2">
+                        <i class="ti ti-plus"></i> Spawn Domain Agent
+                    </button>
+                </div>
+        </aside>
+
+        <!-- Center Pane: Universal Terminal -->
+        <main class="flex-1 flex flex-col bg-[#080808] relative">
+            <div class="absolute inset-0 chat-glow pointer-events-none"></div>
+
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-8 space-y-6 terminal-text text-sm">
+                <div
+                    class="p-4 bg-[#111111] border border-[#2A3439] rounded-sm text-[#666666] text-xs uppercase tracking-widest leading-relaxed">
+                    [SYSTEM_BOOT] Universal AI Hub initialized...<br>
+                    [SYSTEM_BOOT] Memory AI linked (Accuracy: 0.98)<br>
+                    [SYSTEM_BOOT] Orchestrator online. Awaiting directive.
+                </div>
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="p-6 border-t border-[#2A3439] bg-[#0F0F0F]">
+                <form id="chat-form" class="flex items-center gap-4 relative">
+                    <span class="text-amber font-bold absolute left-3 top-1/2 -translate-y-1/2 text-sm">USER ></span>
+                    <input type="text" id="message-input" autocomplete="off" placeholder="..."
+                        class="flex-1 bg-[#0A0A0A] border border-[#2A3439] py-4 pl-16 pr-28 rounded-sm terminal-text text-[#F7F7F7] focus:border-amber/50 outline-none transition-colors">
+                    <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                        <button type="submit" id="send-button"
+                            class="px-5 py-2 bg-amber text-[#111111] text-[10px] font-bold uppercase tracking-widest interactive">
+                            Execute
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Right Pane: Telemetry & Live Stream -->
+        <aside class="w-72 flex-shrink-0 flex flex-col border-l border-[#2A3439] panel-bg z-10">
+            <div class="p-6 border-b border-[#2A3439] flex flex-col items-center bg-[#0F0F0F]">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#666666] self-start mb-8">Retrieval
+                    Confidence</h2>
+                <div class="relative w-36 h-32 flex items-center justify-center">
+                    <svg class="w-full h-full -rotate-90 transform" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#1A1A1A" stroke-width="4" />
+                        <circle id="confidence-circle" cx="50" cy="50" r="45" fill="none" stroke="#FFBF00"
+                            stroke-width="4" stroke-dasharray="283" stroke-dashoffset="283"
+                            class="transition-all duration-[1500ms] ease-out" />
+                    </svg>
+                    <div class="absolute flex flex-col items-center text-center">
+                        <span id="confidence-text" class="text-3xl font-bold tracking-tighter">0%</span>
+                        <span class="text-[8px] text-[#666666] font-bold uppercase tracking-widest mt-1">Trust
+                            Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <div class="p-4 border-b border-[#2A3439] flex items-center justify-between">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#666666]">Activity Stream</h2>
+                    <div class="w-1.5 h-1.5 rounded-full bg-amber pulse-amber"></div>
+                </div>
+                <div id="live-feed"
+                    class="flex-1 overflow-y-auto p-4 space-y-4 text-[9px] uppercase tracking-[0.15em] terminal-text leading-relaxed">
+                    <div class="text-[#666666]">[WAITING_FOR_DATA]</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Manual Spawn Modal -->
+    <div id="spawn-modal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-6 transition-opacity duration-300 opacity-0">
+        <div id="modal-content"
+            class="max-w-md w-full bg-[#111111] border border-[#2A3439] p-8 space-y-8 shadow-2xl transition-all duration-300 transform scale-95 opacity-0">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-white">Manual Agent Spawn Pipeline</h3>
+                <i id="close-modal"
+                    class="ti ti-x text-[#666666] hover:text-red-500 interactive transition-colors cursor-pointer"></i>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    <label class="text-[9px] text-[#666666] uppercase font-bold mb-2 block tracking-widest">Agent
+                        Designation</label>
+                    <input type="text" id="agent-name-input" placeholder="e.g. CodeAnalyst"
+                        class="w-full bg-[#0A0A0A] border border-[#2A3439] p-4 text-sm focus:border-amber/50 outline-none text-[#F7F7F7] rounded-sm transition-colors">
+                </div>
+                <div>
+                    <label class="text-[9px] text-[#666666] uppercase font-bold mb-2 block tracking-widest">Target
+                        Domain Specification</label>
+                    <textarea id="agent-domain-input" placeholder="Describe the expertise required..."
+                        class="w-full bg-[#0A0A0A] border border-[#2A3439] p-4 text-sm focus:border-amber/50 outline-none text-[#F7F7F7] h-32 rounded-sm resize-none transition-colors"></textarea>
+                </div>
+            </div>
+            <button id="confirm-spawn"
+                class="w-full py-4 bg-amber text-[#111111] text-xs font-bold uppercase tracking-widest hover:brightness-110 interactive transition-all">
+                Initiate Fabrication
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat-messages');
+        const chatForm = document.getElementById('chat-form');
+        const messageInput = document.getElementById('message-input');
+        const sendBtn = document.getElementById('send-button');
+        const agentList = document.getElementById('agent-list');
+        const liveFeed = document.getElementById('live-feed');
+
+        let conversationId = localStorage.getItem('universal_session') || crypto.randomUUID();
+        localStorage.setItem('universal_session', conversationId);
+
+        // UI Helpers
+        function addMessage(role, text) {
+            const div = document.createElement('div');
+            div.className = 'animate-in';
+            const isHub = role === 'hub';
+            const prefix = isHub ? '<span class="text-amber">HUB ></span>' : '<span class="text-amber/40">USER ></span>';
+            const contentColor = isHub ? 'text-white' : 'text-[#AAAAAA]';
+
+            div.innerHTML = `
+                <div class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 font-bold text-xs mt-0.5">${prefix}</span>
+                    <div class="${contentColor} leading-relaxed max-w-4xl">${text}</div>
+                </div>
+            `;
+            chatContainer.appendChild(div);
+            chatContainer.scrollTo({ top: chatContainer.scrollHeight, behavior: 'smooth' });
+        }
+
+        function addLog(msg, type = 'info') {
+            const div = document.createElement('div');
+            div.className = 'border-l-2 border-[#2A3439] pl-3 py-0.5 animate-in';
+            const timestamp = new Date().toLocaleTimeString('en-GB', { hour12: false });
+            const color = type === 'spawn' ? 'text-amber font-bold' : 'text-[#666666]';
+            div.innerHTML = `<span class="text-[7px] block opacity-40 mb-0.5">${timestamp}</span><span class="${color}">${msg}</span>`;
+            liveFeed.prepend(div);
+            if (liveFeed.children.length > 25) liveFeed.lastChild.remove();
+        }
+
+        function updateConfidence(val) {
+            const circle = document.getElementById('confidence-circle');
+            const text = document.getElementById('confidence-text');
+            const offset = 283 - (283 * (val / 100));
+            circle.style.strokeDashoffset = offset;
+            text.innerText = `${val}%`;
+        }
+
+        function highlightStat(elementId, newValue) {
+            const el = document.getElementById(elementId);
+            if (el.innerText !== newValue) {
+                el.innerText = newValue;
+                el.classList.add('highlight');
+                setTimeout(() => el.classList.remove('highlight'), 800);
+            }
+        }
+
+        async function syncDashboard() {
+            try {
+                const [healthRes, agentsRes] = await Promise.all([
+                    fetch('/api/system/status'),
+                    fetch('/api/agents')
+                ]);
+
+                const health = await healthRes.json();
+                const agents = await agentsRes.json();
+
+                // Stats
+                highlightStat('stat-concepts', (health.memory_ai?.concepts || 0).toLocaleString());
+                highlightStat('stat-agents', (agents.totalSpawned || 0) + (Object.keys(agents.registry || {}).length));
+                highlightStat('stat-sessions', health.chat?.activeConversations || 0);
+
+                // Agent List
+                if (agents.registry) {
+                    agentList.innerHTML = '';
+                    Object.entries(agents.registry).forEach(([domain, info]) => {
+                        const card = document.createElement('div');
+                        card.className = 'hairline bg-[#111111] p-4 rounded-sm flex flex-col gap-2 hover:bg-[#1A1A1A] transition-all group interactive hover:-translate-y-1';
+                        const isBuiltin = info.type === 'builtin';
+                        const statusColor = isBuiltin ? 'bg-amber pulse-amber' : (info.type === 'spawned' ? 'bg-green-500' : 'bg-[#333]');
+
+                        card.innerHTML = `
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase text-white tracking-widest">${domain}</span>
+                                <div class="w-1.5 h-1.5 rounded-full ${statusColor}"></div>
+                            </div>
+                            <div class="flex items-center justify-between gap-4">
+                                <span class="text-[9px] text-[#666666] uppercase truncate">${info.source}</span>
+                                ${domain === 'trading' ? `
+                                    <a href="http://localhost:8000" target="_blank" class="text-[8px] text-amber uppercase font-bold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        LINK <i class="ti ti-external-link"></i>
+                                    </a>
+                                ` : ''}
+                            </div>
+                        `;
+                        agentList.appendChild(card);
+                    });
+                }
+
+                // Confidence update
+                if (health.memory_ai?.accuracy) {
+                    updateConfidence(Math.round(health.memory_ai.accuracy * 100));
+                }
+
+            } catch (e) {
+                console.error('System sync failed');
+            }
+        }
+
+        // Interaction Logic
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const msg = messageInput.value.trim();
+            if (!msg) return;
+
+            addMessage('user', msg);
+            messageInput.value = '';
+            messageInput.disabled = true;
+            sendBtn.disabled = true;
+            addLog(`EXECUTING_QUERY: ${msg.substring(0, 20)}...`);
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: msg, conversationId })
+                });
+                const data = await res.json();
+
+                if (data.response) {
+                    addMessage('hub', data.response);
+                    if (data.agentSpawned) {
+                        addLog(`ORCHESTRATOR: Fabricated new agent [${data.agentSpawned}]`, 'spawn');
+                    }
+                    if (data.intent) {
+                        addLog(`ROUTING: Intent identified as [${data.intent}]`);
+                    }
+                }
+            } catch (err) {
+                addMessage('hub', '[CRITICAL_FAILURE] System interface disrupted. Check console.');
+            } finally {
+                messageInput.disabled = false;
+                sendBtn.disabled = false;
+                messageInput.focus();
+            }
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('spawn-modal');
+        const modalContent = document.getElementById('modal-content');
+        document.getElementById('spawn-trigger').addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('opacity-0', 'scale-95');
+            }, 10);
+        });
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        };
+        document.getElementById('close-modal').addEventListener('click', closeModal);
+
+        document.getElementById('confirm-spawn').addEventListener('click', async () => {
+            const name = document.getElementById('agent-name-input').value;
+            const domain = document.getElementById('agent-domain-input').value;
+            if (!name) return;
+
+            addLog(`INITIATING_FABRICATION: ${name}`);
+            closeModal();
+
+            try {
+                const res = await fetch('/api/agents/spawn', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, domain })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    addLog(`FABRICATION_COMPLETE: ${data.agent}`, 'spawn');
+                    syncDashboard();
+                } else {
+                    addLog(`FABRICATION_FAILED: ${data.message}`);
+                }
+            } catch (e) {
+                addLog('PIPELINE_ERROR: Fabrication disrupted.');
+            }
+        });
+
+        // Init
+        syncDashboard();
+        setInterval(syncDashboard, 5000);
+        addLog('SYSTEM_BOOT: Universal AI Hub online.');
+        setTimeout(() => updateConfidence(85), 500); // Animate initial confidence
+    </script>
+</body>
+
+</html>

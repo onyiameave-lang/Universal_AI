@@ -1,0 +1,130 @@
+{
+  "name": "Master Strategy for EURUSDX",
+  "symbol": "EURUSDX",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify current market structure to define potential ranges or mean-reversion zones, rather than relying on a strong primary trend for directional bias.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    },
+    {
+      "rule": "Enter long only after a bullish liquidity sweep (sell-side liquidity cleared) at a structural low or range extreme, followed by a confirmed Change of Character (CHoCH) on a lower timeframe.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Enter short only after a bearish liquidity sweep (buy-side liquidity cleared) at a structural high or range extreme, followed by a confirmed Change of Character (CHoCH) on a lower timeframe.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Look for valid single-candle liquidity sweep on a higher timeframe (HTF) to confirm potential reversal points before seeking entry on a lower timeframe (LTF).",
+      "confidence": 0.98,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Use Fibonacci 61.8%\u201378.6% retracement for Optimal Trade Entry (OTE) within a Fair Value Gap (FVG) after displacement, following a liquidity sweep and CHoCH.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Prioritize entries that align with the mean-reverting nature of EURUSDX, typically at extremes of a defined range or after significant deviations from a moving average/mean.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: target the next significant swing high (next buy-side liquidity pool) within the current market structure.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For liquidity sweep shorts: target the next significant swing low (next sell-side liquidity pool) within the current market structure.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Set take-profit at clear structural highs (for longs) or structural lows (for shorts), aligning with the choppy, range-bound nature of EURUSDX.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Consider partial profit-taking at intermediate structural levels to lock in gains, especially given the low volatility and potential for limited extended moves.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    },
+    {
+      "rule": "Adjust profit targets to be realistic for low volatility; avoid overly ambitious targets that require large, sustained moves.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss below the order block or the lowest point of the liquidity sweep candle for long trades (bullish setup).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Place stop loss above the order block or the highest point of the liquidity sweep candle for short trades (bearish setup).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Always leave a spread buffer when setting stop loss to mitigate slippage, especially around key levels.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Define a maximum risk per trade (e.g., 1-2% of trading capital) and adhere to it strictly.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    },
+    {
+      "rule": "Ensure a minimum Risk-Reward ratio of 1:1.5 or higher for every trade, adjusting for the low volatility environment.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    },
+    {
+      "rule": "Avoid excessively tight stop losses; allow sufficient room for price action to breathe, considering the low volatility and potential for whipsaws in choppy conditions.",
+      "confidence": 0.9,
+      "source": "Expert Adaptation"
+    }
+  ],
+  "indicators": [
+    "Price Action (Market Structure, Liquidity Sweeps, Order Blocks, Fair Value Gaps, Displacement)",
+    "Fibonacci Retracement Tool (for Optimal Trade Entry)"
+  ],
+  "market_structure": [
+    "Higher Highs/Higher Lows (Uptrend - short-term)",
+    "Lower Highs/Lower Lows (Downtrend - short-term)",
+    "Liquidity Sweeps (Sell-side and Buy-side)",
+    "Change of Character (CHoCH)",
+    "Order Blocks",
+    "Fair Value Gaps (FVG)",
+    "Swing Highs/Lows"
+  ],
+  "psychology": [
+    "Maintain discipline in waiting for high-probability setups that align with liquidity sweeps and CHoCH.",
+    "Exercise patience in choppy markets, avoiding overtrading.",
+    "Accept that not all trades will reach full targets; focus on consistent execution and risk management."
+  ],
+  "adaptations": [
+    "The strategy is adapted for EURUSDX's mean-reverting and choppy nature by emphasizing liquidity sweeps and CHoCH at range extremes or structural turning points, rather than strong trend following.",
+    "Profit targets are set realistically for low volatility, focusing on structural highs/lows and considering partial profits.",
+    "Stop loss placement accounts for low volatility and potential whipsaws, allowing sufficient buffer while maintaining a favorable risk-reward.",
+    "Multi-timeframe analysis (HTF for structure/liquidity, LTF for entry confirmation) is crucial to filter noise in a choppy environment."
+  ],
+  "overall_confidence": 0.92,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "EURUSDX",
+  "_timestamp": "2026-06-03 12:51:02.032123",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "EURUSDX",
+  "optimization_score": 86.13,
+  "_optimized_at": "2026-06-14 03:12:39.378419",
+  "entry_tf": "daily"
+}

@@ -1,0 +1,123 @@
+{
+  "name": "Master Strategy for AMZN",
+  "symbol": "AMZN",
+  "symbol_type": "mean_reverting_normal",
+  "entry_conditions": [
+    {
+      "rule": "Identify the primary market structure (higher highs/higher lows = uptrend; lower highs/lower lows = downtrend) on a higher timeframe (HTF) to establish directional bias or range context.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For long entries: Identify a bullish liquidity sweep (sell-side liquidity cleared below a swing low) on the HTF, followed by a clear Change of Character (CHoCH) confirmation on a lower timeframe (LTF).",
+      "confidence": 0.95,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short entries: Identify a bearish liquidity sweep (buy-side liquidity cleared above a swing high) on the HTF, followed by a clear Change of Character (CHoCH) confirmation on the LTF.",
+      "confidence": 0.95,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "After a strong displacement (impulsive move) and the formation of a Fair Value Gap (FVG) following the CHoCH, look for Optimal Trade Entry (OTE) within the Fibonacci 61.8%\u201378.6% retracement zone of the displacement move.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Confirm CHoCH and displacement with strong bullish/bearish candlestick closes and/or significant volume spikes, especially on the LTF.",
+      "confidence": 0.85,
+      "source": "logical_improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For liquidity sweep longs: Target the next significant swing high (buy-side liquidity pool) or structural high as the primary take-profit level.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For liquidity sweep shorts: Target the next significant swing low (sell-side liquidity pool) or structural low as the primary take-profit level.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Consider taking partial profits at intermediate structural levels, especially given AMZN's high volatility, to lock in gains.",
+      "confidence": 0.8,
+      "source": "logical_improvement"
+    },
+    {
+      "rule": "Re-evaluate or exit the trade if market structure breaks against the trade direction before the target is hit, indicating a potential reversal.",
+      "confidence": 0.85,
+      "source": "logical_improvement"
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades: Place stop loss below the originating order block or the low of the liquidity sweep candle, ensuring it's below the structure that initiated the move.",
+      "confidence": 0.95,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For short trades: Place stop loss above the originating order block or the high of the liquidity sweep candle, ensuring it's above the structure that initiated the move.",
+      "confidence": 0.95,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Always leave a small spread buffer (e.g., 5-10 ticks) when setting stop loss to mitigate slippage, particularly with high volatility.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "Adjust position size based on the distance to the stop loss and AMZN's high volatility to ensure a consistent risk percentage per trade (e.g., 1-2% of total capital).",
+      "confidence": 0.95,
+      "source": "logical_improvement"
+    },
+    {
+      "rule": "Ensure a minimum 1:2 Risk-Reward ratio for every trade setup to maintain profitability over time.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for Optimal Trade Entry)",
+    "Volume (for confirmation of displacement and CHoCH)"
+  ],
+  "market_structure": [
+    "Higher Highs / Higher Lows (Uptrend)",
+    "Lower Highs / Lower Lows (Downtrend)",
+    "Liquidity Pools (Swing Highs/Lows)",
+    "Order Blocks (Bullish/Bearish)",
+    "Fair Value Gaps (FVG)",
+    "Change of Character (CHoCH)",
+    "Liquidity Sweeps (Sell-side/Buy-side)"
+  ],
+  "psychology": [
+    "Strictly adhere to the defined risk management rules and position sizing.",
+    "Avoid overtrading; focus on high-probability setups that align with the strategy.",
+    "Trust the higher timeframe analysis for context and direction, but execute precisely on the lower timeframe.",
+    "Manage emotions during high volatility; stick to the plan and avoid impulsive decisions."
+  ],
+  "adaptations": [
+    {
+      "characteristic": "High Volatility",
+      "adaptation": "Allow for slightly wider stop losses (while still respecting order block structure) or reduce position size to accommodate larger price swings and prevent premature stop-outs. Be prepared for faster moves to targets and potential rapid reversals."
+    },
+    {
+      "characteristic": "Mean Reverting / Weak Trend",
+      "adaptation": "Prioritize reversal setups (liquidity sweeps + CHoCH) over extended trend-following. Focus on capturing moves between structural highs and lows. Target structural levels as profit targets, avoiding attempts to capture long-term trends. Be cautious of false breakouts and always wait for clear CHoCH confirmation."
+    },
+    {
+      "characteristic": "Timeframe Alignment",
+      "adaptation": "Utilize a higher timeframe (e.g., Daily/4H) for identifying primary market structure, liquidity pools, and initial liquidity sweeps. Use a lower timeframe (e.g., 1H/15M) for precise CHoCH confirmation, FVG identification, and Optimal Trade Entry (OTE)."
+    }
+  ],
+  "overall_confidence": 0.9,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "AMZN",
+  "_timestamp": "2026-06-03 12:47:32.095439",
+  "optimized_for": "AMZN",
+  "optimization_score": 86.4,
+  "_optimized_at": "2026-06-14 03:12:39.043878",
+  "entry_tf": "30min"
+}

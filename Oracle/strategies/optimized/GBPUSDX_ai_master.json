@@ -1,0 +1,119 @@
+{
+  "name": "Master Strategy for GBPUSDX",
+  "symbol": "GBPUSDX",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "Identify the prevailing market bias using higher timeframe (HTF) market structure (higher highs/higher lows for bullish bias; lower highs/lower lows for bearish bias). In a choppy market, this bias may be short-lived or range-bound.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For long entries: Wait for price to execute a clear bullish liquidity sweep (clearing sell-side liquidity, typically below a swing low or previous support) on the HTF.",
+      "confidence": 1.0,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short entries: Wait for price to execute a clear bearish liquidity sweep (clearing buy-side liquidity, typically above a swing high or previous resistance) on the HTF.",
+      "confidence": 1.0,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "After a liquidity sweep, observe a Change of Character (CHoCH) on a lower timeframe (LTF), confirming a shift in market momentum in the intended direction.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Following the CHoCH and displacement, look for an Optimal Trade Entry (OTE) within the Fibonacci 61.8%\u201378.6% retracement zone of the new impulse leg. This entry should ideally coincide with a Fair Value Gap (FVG) or an Order Block (OB) for higher probability.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "In a low volatility, choppy market, prioritize high-conviction setups where liquidity sweeps are clear and CHoCH is decisive. Avoid ambiguous setups.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "For long trades: Target the next significant structural high (representing the next buy-side liquidity pool).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short trades: Target the next significant structural low (representing the next sell-side liquidity pool).",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Given the 'mean_reverting_choppy' nature of GBPUSDX, consider taking partial profits at intermediate structural highs/lows or aiming for slightly more conservative targets to lock in gains before potential reversals.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    },
+    {
+      "rule": "Ensure the potential take-profit level offers a minimum risk-reward ratio of 1:1.5 or higher before entering the trade.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "For long trades: Place stop loss strategically below the order block or the low of the CHoCH structure that initiated the move.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "For short trades: Place stop loss strategically above the order block or the high of the CHoCH structure that initiated the move.",
+      "confidence": 0.88,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Always leave a spread buffer (e.g., 2-5 pips for GBPUSDX) when setting stop loss to mitigate slippage, especially critical in low volatility conditions where price action can be tight.",
+      "confidence": 0.9,
+      "source": "book_ict_trading_strategy"
+    },
+    {
+      "rule": "Implement strict position sizing, risking no more than 0.5% to 1% of total trading capital per trade.",
+      "confidence": 0.95,
+      "source": "logical_improvement"
+    },
+    {
+      "rule": "Adjust stop loss distance based on the current Average True Range (ATR) or daily range to account for low volatility, ensuring it's tight but still allows the trade to breathe.",
+      "confidence": 0.9,
+      "source": "logical_improvement"
+    }
+  ],
+  "indicators": [
+    "Fibonacci Retracement Tool (for OTE)",
+    "Market Structure Analysis (Swing Highs/Lows, Order Blocks, Fair Value Gaps)"
+  ],
+  "market_structure": [
+    "Higher Highs (HH) / Higher Lows (HL) for Uptrend/Bullish Bias",
+    "Lower Highs (LH) / Lower Lows (LL) for Downtrend/Bearish Bias",
+    "Liquidity Pools (Sell-side Liquidity below lows, Buy-side Liquidity above highs)",
+    "Order Blocks (OB): Specific candles that initiated strong moves after liquidity sweeps",
+    "Fair Value Gaps (FVG): Imbalances in price action, often acting as magnets or support/resistance",
+    "Change of Character (CHoCH): A break of the immediate opposing market structure, signaling a potential reversal"
+  ],
+  "psychology": [
+    "Maintain discipline and patience, waiting only for high-probability setups that align with all conditions.",
+    "Avoid emotional trading, especially when dealing with tight ranges and frequent reversals characteristic of choppy markets.",
+    "Adhere strictly to risk management rules to protect capital in low volatility environments where profit margins can be smaller."
+  ],
+  "adaptations": [
+    "**Leveraging Mean Reversion:** The core strategy of liquidity sweeps followed by CHoCH is perfectly suited for mean-reverting behavior, as it aims to capitalize on reversals after price extends beyond a perceived 'fair value' to clear liquidity.",
+    "**Choppy Market Strategy:** In a choppy market, focus on shorter-term structural targets and be prepared to take partial profits. Avoid expecting large, sustained trends. The strategy's emphasis on HTF liquidity and LTF confirmation helps filter out noise.",
+    "**Low Volatility Adjustments:** Stop losses and take profits should be scaled appropriately for smaller average daily ranges. The spread buffer on stop losses is crucial. Multi-timeframe analysis becomes even more important to find precise entries and exits, maximizing the small moves available.",
+    "**Weak Trend Consideration:** While identifying a primary trend is part of the initial analysis, be aware that in a weak trend, counter-trend liquidity sweeps can be very profitable. The strategy is robust enough to capture these reversals within a broader weak trend or range."
+  ],
+  "overall_confidence": 0.92,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "GBPUSDX",
+  "_timestamp": "2026-06-03 12:49:14.731183",
+  "_adaptation": "mean_reverting_adapted",
+  "optimized_for": "GBPUSDX",
+  "optimization_score": 87.2,
+  "_optimized_at": "2026-06-14 03:12:39.459393",
+  "entry_tf": "daily"
+}

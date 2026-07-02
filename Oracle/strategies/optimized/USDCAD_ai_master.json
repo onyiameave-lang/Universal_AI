@@ -1,0 +1,103 @@
+{
+  "name": "Master Strategy for USDCAD",
+  "symbol": "USDCAD",
+  "symbol_type": "mean_reverting_choppy",
+  "entry_conditions": [
+    {
+      "rule": "On a higher timeframe (e.g., 4H/Daily), identify the immediate market structure to establish a directional bias. For USDCAD's weak trend, prioritize identifying short-term ranges or minor trends. If ranging, both long and short setups are valid.",
+      "confidence": 90.0,
+      "source": "Inference/Adaptation"
+    },
+    {
+      "rule": "For Long Entry: Identify a bullish liquidity sweep (clearance of sell-side liquidity, often below a previous low or range bottom) on the trading timeframe.",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Long Entry: Following the bullish liquidity sweep, observe a Change of Character (CHoCH) on a lower timeframe (e.g., 5M/15M) confirming a shift from bearish to bullish market structure (e.g., break of previous lower high).",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Long Entry: Enter long on the retest of a fair value gap (FVG) or order block (OB) formed after the CHoCH, within the context of the higher timeframe bias.",
+      "confidence": 85.0,
+      "source": "Inference from ICT concepts"
+    },
+    {
+      "rule": "For Short Entry: Identify a bearish liquidity sweep (clearance of buy-side liquidity, often above a previous high or range top) on the trading timeframe.",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Short Entry: Following the bearish liquidity sweep, observe a Change of Character (CHoCH) on a lower timeframe (e.g., 5M/15M) confirming a shift from bullish to bearish market structure (e.g., break of previous higher low).",
+      "confidence": 90.0,
+      "source": "book_ict_trading_strategy, master_knowledge"
+    },
+    {
+      "rule": "For Short Entry: Enter short on the retest of a fair value gap (FVG) or order block (OB) formed after the CHoCH, within the context of the higher timeframe bias.",
+      "confidence": 85.0,
+      "source": "Inference from ICT concepts"
+    }
+  ],
+  "exit_conditions": [
+    {
+      "rule": "Target previous swing highs/lows, significant order blocks, or fair value gaps within the expected mean-reversion range. Avoid holding for large trends.",
+      "confidence": 85.0
+    },
+    {
+      "rule": "Consider partial profit taking at intermediate resistance/support levels to secure gains and reduce risk in choppy conditions.",
+      "confidence": 80.0
+    },
+    {
+      "rule": "Exit if price fails to move in the intended direction after a reasonable period (e.g., 2-3 candles on entry timeframe), indicating a potential false setup or continued choppiness.",
+      "confidence": 75.0
+    }
+  ],
+  "risk_management": [
+    {
+      "rule": "Place stop loss logically beyond the liquidity sweep point or the structure that confirmed the CHoCH (e.g., below the low of the CHoCH candle for long, above the high for short).",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Limit risk per trade to a maximum of 1-2% of total trading capital.",
+      "confidence": 95.0
+    },
+    {
+      "rule": "Ensure a minimum Risk-Reward Ratio of 1:1.5, ideally 1:2 or higher, before entering a trade.",
+      "confidence": 90.0
+    },
+    {
+      "rule": "Avoid trading during major news events that can cause unpredictable spikes and whipsaws, especially given USDCAD's low volatility.",
+      "confidence": 85.0
+    }
+  ],
+  "indicators": [
+    "Market Structure (Highs/Lows, Breaks of Structure, Change of Character)",
+    "Liquidity Pools (Previous Swing Highs/Lows, Equal Highs/Lows)",
+    "Order Blocks (OBs)",
+    "Fair Value Gaps (FVGs)"
+  ],
+  "market_structure": [
+    "Higher Timeframe Market Structure: Used to establish a directional bias (uptrend, downtrend, or range) for the trading session, acknowledging USDCAD's weak trend.",
+    "Lower Timeframe Market Structure: Used for precise entry confirmation via Change of Character (CHoCH) after a liquidity sweep."
+  ],
+  "psychology": [
+    "Maintain discipline to wait for high-probability setups that align with both liquidity sweeps and CHoCH confirmation.",
+    "Accept that not all setups will work; focus on consistent execution of the strategy and proper risk management.",
+    "Avoid emotional trading during choppy periods; stick to predefined entry/exit rules."
+  ],
+  "adaptations": [
+    "Prioritize setups that occur at the extremes of established ranges or clear higher timeframe support/resistance zones, as these are common turning points for mean-reverting assets.",
+    "Be prepared for quick reversals and adjust profit targets accordingly, focusing on shorter-term moves rather than extended trends.",
+    "Avoid overtrading in highly ambiguous or extremely tight choppy conditions where liquidity sweeps might be less clear or more frequent false signals occur."
+  ],
+  "overall_confidence": 90.0,
+  "_source": "master_knowledge",
+  "_source_type": "master",
+  "_built_for": "USDCAD",
+  "_timestamp": "2026-06-26 23:12:28.323097",
+  "optimized_for": "USDCAD",
+  "optimization_score": 100.0,
+  "_optimized_at": "2026-06-26 23:12:28.350171",
+  "entry_tf": "daily"
+}
